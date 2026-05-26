@@ -1,0 +1,2765 @@
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udoh Blessing | Product Designer Portfolio</title>
+    <!-- Fonts: Inter (Sans), Playfair Display (Serif), JetBrains Mono (Mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            colors: {
+              medical: {
+                black: "#0a0a0a",
+                white: "#f5f5f5",
+                teal: "#00e5ff",
+                blue: "#4f46e5",
+                red: "#ff3b3b",
+                lime: "#00ff88",
+                violet: "#8b5cf6",
+                border: "rgba(255,255,255,0.08)",
+                borderLight: "rgba(0,0,0,0.08)",
+              },
+            },
+            transitionTimingFunction: {
+              clinical: "cubic-bezier(0.4, 0.0, 0.2, 1)",
+            },
+            keyframes: {
+              "clinical-sweep": {
+                "0%": { transform: "translateX(-100%)", opacity: "0" },
+                "15%": { opacity: "0.03" },
+                "85%": { opacity: "0.03" },
+                "100%": { transform: "translateX(100%)", opacity: "0" },
+              },
+              "clinical-marquee": {
+                to: { transform: "translateX(-50%)" },
+              },
+            },
+            animation: {
+              "clinical-sweep":
+                "clinical-sweep 600ms cubic-bezier(0.4, 0.0, 0.2, 1) forwards",
+              "clinical-marquee": "clinical-marquee 40s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Iconify (Solar Linear Icons) -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      ::selection {
+        background-color: rgba(0, 229, 255, 0.2);
+        color: inherit;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(120, 120, 120, 0.2);
+        border-radius: 4px;
+      }
+      .ambient-depth {
+        background:
+          radial-gradient(
+            120% 100% at 50% 0%,
+            rgba(15, 23, 42, 0.03) 0%,
+            transparent 100%
+          ),
+          radial-gradient(
+            100% 100% at 50% 100%,
+            rgba(0, 0, 0, 0.02) 0%,
+            transparent 100%
+          );
+        transition: background 300ms ease;
+      }
+      .dark .ambient-depth {
+        background:
+          radial-gradient(
+            120% 100% at 50% 0%,
+            rgba(200, 220, 255, 0.03) 0%,
+            transparent 100%
+          ),
+          radial-gradient(
+            100% 100% at 50% 100%,
+            rgba(255, 255, 255, 0.01) 0%,
+            transparent 100%
+          );
+      }
+      .light-response {
+        background: linear-gradient(
+          105deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.4) 20%,
+          rgba(255, 255, 255, 0.1) 40%,
+          transparent 100%
+        );
+        mix-blend-mode: soft-light;
+        opacity: 0.05;
+      }
+      .dark .light-response {
+        background: linear-gradient(
+          105deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.04) 20%,
+          rgba(255, 255, 255, 0.01) 40%,
+          transparent 100%
+        );
+        mix-blend-mode: screen;
+        opacity: 0.2;
+      }
+      .micro-medical-texture {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='fineGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23fineGrain)' opacity='0.5'/%3E%3C/svg%3E");
+        opacity: 0.015;
+        mix-blend-mode: multiply;
+      }
+      .dark .micro-medical-texture {
+        opacity: 0.015;
+        mix-blend-mode: overlay;
+      }
+      .bg-grid-pattern {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          );
+        background-size: 48px 48px;
+      }
+      .dark .bg-grid-pattern {
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px
+          );
+      }
+      html:not(.dark) .bg-grid-pattern {
+        background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      }
+      .cursor-blink::after {
+        content: "|";
+        animation: blink 1s step-end infinite;
+        opacity: 0.5;
+        font-weight: 300;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+      @keyframes scanSweep {
+        0% {
+          transform: translateY(-100vh);
+        }
+        100% {
+          transform: translateY(100vh);
+        }
+      }
+      @keyframes crtScroll {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 0 6px;
+        }
+      }
+      @keyframes grainShift {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        10% {
+          transform: translate(-1%, 1%);
+        }
+        20% {
+          transform: translate(1%, -1%);
+        }
+        30% {
+          transform: translate(-1%, -1%);
+        }
+        40% {
+          transform: translate(1%, 1%);
+        }
+        50% {
+          transform: translate(-1%, 0%);
+        }
+        60% {
+          transform: translate(1%, 0%);
+        }
+        70% {
+          transform: translate(0%, -1%);
+        }
+        80% {
+          transform: translate(0%, 1%);
+        }
+        90% {
+          transform: translate(-1%, 1%);
+        }
+      }
+      .crt-scanlines {
+        background: repeating-linear-gradient(
+          to bottom,
+          transparent 0%,
+          transparent 50%,
+          rgba(0, 0, 0, 0.04) 51%,
+          rgba(0, 0, 0, 0.04) 100%
+        );
+        background-size: 100% 6px;
+        animation: crtScroll 3s linear infinite;
+      }
+      .dark .crt-scanlines {
+        background: repeating-linear-gradient(
+          to bottom,
+          transparent 0%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.02) 51%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+      }
+      .scan-line {
+        animation: scanSweep 8s linear infinite;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(0, 229, 255, 0.02) 50%,
+          rgba(0, 229, 255, 0.08) 95%,
+          rgba(0, 229, 255, 0.3) 100%
+        );
+        border-bottom: 1px solid rgba(0, 229, 255, 0.4);
+        will-change: transform;
+      }
+      .dark .scan-line {
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(255, 255, 255, 0.01) 50%,
+          rgba(255, 255, 255, 0.03) 95%,
+          rgba(255, 255, 255, 0.15) 100%
+        );
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .noise-texture {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        opacity: 0.015;
+        animation: grainShift 8s steps(4) infinite;
+        will-change: transform;
+      }
+      .dark .noise-texture {
+        opacity: 0.02;
+      }
+    </style>
+  </head>
+  <body
+    class="dark:bg-medical-black dark:text-medical-white transition-colors duration-[400ms] ease-clinical overflow-x-hidden text-base text-zinc-900 font-sans bg-zinc-50 relative"
+  >
+    <!-- BACKGROUND ENHANCEMENT SYSTEM -->
+    <div class="fixed inset-0 pointer-events-none z-[-5] ambient-depth"></div>
+    <div class="fixed inset-0 pointer-events-none z-[-4] light-response"></div>
+    <div
+      class="fixed inset-0 pointer-events-none z-[-3] micro-medical-texture"
+    ></div>
+
+    <div
+      class="fixed inset-0 pointer-events-none z-[-2] bg-[#0f172a]/[0.03] dark:bg-black/[0.04] mix-blend-multiply dark:mix-blend-normal transition-colors duration-[400ms]"
+    ></div>
+
+    <!-- GLOBAL GRID WITH ID FOR TOGGLE -->
+    <div
+      id="mainGrid"
+      class="fixed inset-0 bg-grid-pattern pointer-events-none z-[-1] transition-opacity duration-[500ms]"
+    ></div>
+
+    <div
+      class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-70 dark:opacity-100 transition-opacity duration-[400ms]"
+      aria-hidden="true"
+    >
+      <div class="absolute -inset-[10%] w-[120%] h-[120%] noise-texture"></div>
+      <div class="absolute inset-0 crt-scanlines"></div>
+      <div class="absolute inset-x-0 h-[25vh] scan-line"></div>
+    </div>
+
+    <!-- Navigation Architecture -->
+    <header
+      class="fixed top-0 w-full z-50 border-b border-medical-borderLight dark:border-medical-border bg-white/80 dark:bg-medical-black/80 backdrop-blur-md transition-colors duration-300"
+    >
+      <div
+        class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-12 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <div
+            class="w-2 h-2 rounded-full bg-medical-lime shadow-[0_0_8px_rgba(0,255,136,0.4)]"
+          ></div>
+          <span
+            class="font-mono text-xs font-medium tracking-wider text-zinc-800 dark:text-zinc-200"
+            >PRODUCT DESIGNS</span
+          >
+        </div>
+
+        <nav
+          class="hidden md:flex items-center gap-8 font-mono text-xs text-zinc-500 dark:text-zinc-400"
+        >
+          <a
+            href="#about"
+            class="hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+          >
+            [01] ABOUT
+          </a>
+
+          <a
+            href="#projects"
+            class="hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+          >
+            [02] PROJECTS
+          </a>
+
+          <a
+            href="#process"
+            class="hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+          >
+            [03] PROCESS
+          </a>
+
+          <a
+            href="#contact"
+            class="hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+          >
+            [04] CONTACT
+          </a>
+
+          <button
+            id="themeToggle"
+            class="ml-4 hover:text-zinc-900 dark:hover:text-white transition-colors focus:outline-none flex items-center justify-center"
+          >
+            <iconify-icon
+              icon="solar:sun-2-linear"
+              class="text-[16px] hidden dark:block"
+            ></iconify-icon>
+
+            <iconify-icon
+              icon="solar:moon-linear"
+              class="text-[16px] block dark:hidden"
+            ></iconify-icon>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="fixed left-0 top-16 w-full h-[1px] bg-medical-borderLight dark:border-medical-border z-40"
+    >
+      <div
+        id="scrollProgress"
+        class="h-full bg-medical-teal w-0 transition-all duration-150 ease-out"
+        style="width: 18.4297%"
+      ></div>
+    </div>
+
+    <main
+      class="md:px-6 lg:px-12 z-10 max-w-[1280px] mr-auto ml-auto pt-32 pr-4 pb-32 pl-4 relative"
+    >
+      <!-- 1. HERO: INITIAL ASSESSMENT -->
+      <section
+        id="diagnosis"
+        class="min-h-[85vh] flex flex-col justify-center relative mb-32 reveal transition-all duration-700 ease-clinical opacity-100 translate-y-0"
+      >
+        <div
+          class="absolute right-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border-[0.5px] border-zinc-200 dark:border-white/5 pointer-events-none opacity-50 flex items-center justify-center"
+        >
+          <div
+            class="w-full h-full rounded-full border-[0.5px] border-zinc-200 dark:border-white/5 scale-75"
+          ></div>
+          <div
+            class="w-full h-full absolute rounded-full border-[0.5px] border-zinc-200 dark:border-white/5 scale-50"
+          ></div>
+        </div>
+
+        <div class="flex items-center gap-3 mb-12">
+          <div
+            class="w-1.5 h-1.5 bg-medical-lime rounded-sm animate-pulse"
+          ></div>
+          <span
+            class="font-mono text-xs uppercase tracking-[0.2em] text-medical-lime"
+          >
+            Product Thinking: User-Centered
+          </span>
+        </div>
+
+        <div class="flex flex-col gap-4 md:gap-6 z-10">
+          <h1
+            class="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tight leading-[1.1] font-normal text-zinc-900 dark:text-medical-white"
+          >
+            Design with
+          </h1>
+          <div class="h-[80px] md:h-[120px]">
+            <h2
+              class="font-serif text-6xl md:text-8xl lg:text-9xl tracking-tight leading-[1.1] font-light italic text-zinc-500 dark:text-zinc-400"
+            >
+              <span id="typewriter" class="cursor-blink">Precisio</span>
+            </h2>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6 border-medical-borderLight dark:border-medical-border border-t mt-32 pt-8 gap-x-12 gap-y-12 items-end"
+        >
+          <div
+            class="col-span-1 md:col-span-4 font-mono text-xs flex flex-col gap-3"
+          >
+            <div
+              class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-2"
+            >
+              <span class="text-zinc-500">DISCIPLINE</span>
+              <span class="text-zinc-900 dark:text-medical-white"
+                >PRODUCT DESIGNER</span
+              >
+            </div>
+            <div
+              class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-2"
+            >
+              <span class="text-zinc-500">STATUS</span>
+              <span class="text-medical-teal">AVAILABLE</span>
+            </div>
+            <div class="flex justify-between pb-2">
+              <span class="text-zinc-500">VERSION</span>
+              <span class="dark:text-medical-white text-zinc-900">SYS.001</span>
+            </div>
+          </div>
+
+          <div class="col-span-1 md:col-span-8 md:pl-12">
+            <p
+              class="font-sans text-xl md:text-2xl font-light leading-relaxed text-zinc-700 dark:text-zinc-300 max-w-2xl"
+            >
+              A highly calibrated approach to digital products. Merging human
+              physiology concepts with advanced UI systems to construct
+              unforgettable, conversion-optimized interfaces.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1.5 INFINITE CASE STUDY STREAM -->
+      <section
+        class="mb-32 w-full overflow-hidden reveal transition-all duration-700 ease-clinical group/marquee relative"
+        style="
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+          );
+          mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 5%,
+            black 95%,
+            transparent 100%
+          );
+        "
+      >
+        <div
+          class="flex w-max animate-clinical-marquee hover:[animation-play-state:paused]"
+        >
+          <!-- SET 1: EDIT YOUR IMAGES HERE -->
+          <!-- Note: To change images, only edit the 'src' attributes inside this block. The second set duplicates automatically. -->
+          <div id="marquee-original" class="flex gap-6 pr-6 shrink-0">
+            <!-- CASE 1 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3755ff81-ae9a-48a2-86ca-2a61d4be16f2_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 1"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_001</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 2 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7e105e6a-8dc9-48bb-ba5c-ab9ef2a87e4e_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 2"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_002</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 3 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ec1cde50-f04e-45f8-b5ec-4553d69d351f_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 3"
+              />
+              <div
+                class="z-20 flex group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical dark:bg-black/60 backdrop-blur-[4px] bg-white/40 opacity-0 absolute top-0 right-0 bottom-0 left-0 items-center justify-center"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_003</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 4 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/51e19d1a-9ac7-43e1-9f96-db30e71449f1_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 4"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >ARCHIVE_004</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 5 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1acce847-6ec2-44e7-bed0-75c5fda0298a_1600w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 5"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_005</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 6 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9864a239-b523-4081-b05c-8152fa839eb8_1600w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 6"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_006</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- SET 2: AUTO-GENERATED DUPLICATE FOR SEAMLESS LOOP -->
+          <div
+            id="marquee-duplicate"
+            class="flex gap-6 shrink-0 pr-6 gap-x-6 gap-y-6"
+            aria-hidden="true"
+          >
+            <!-- CASE 1 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3755ff81-ae9a-48a2-86ca-2a61d4be16f2_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 1"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_001</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 2 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7e105e6a-8dc9-48bb-ba5c-ab9ef2a87e4e_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 2"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_002</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 3 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ec1cde50-f04e-45f8-b5ec-4553d69d351f_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 3"
+              />
+              <div
+                class="z-20 flex group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical dark:bg-black/60 backdrop-blur-[4px] bg-white/40 opacity-0 absolute top-0 right-0 bottom-0 left-0 items-center justify-center"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_003</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 4 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/51e19d1a-9ac7-43e1-9f96-db30e71449f1_3840w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 4"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >ARCHIVE_004</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 5 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1acce847-6ec2-44e7-bed0-75c5fda0298a_1600w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 5"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_005</span
+                >
+              </div>
+            </div>
+
+            <!-- CASE 6 -->
+            <div
+              class="group/card relative w-[280px] md:w-[380px] lg:w-[440px] shrink-0 aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden cursor-pointer hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical"
+            >
+              <div
+                class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover/card:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+              ></div>
+              <!-- EDIT IMAGE SRC HERE -->
+              <img
+                src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/9864a239-b523-4081-b05c-8152fa839eb8_1600w.png"
+                class="transition-all duration-[400ms] ease-clinical group-hover/card:scale-[1.03] group-hover/card:contrast-[1.02] group-hover/card:brightness-[1.02] w-full h-full object-cover"
+                alt="Case Archive 6"
+              />
+              <div
+                class="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-opacity duration-[400ms] ease-clinical bg-white/40 dark:bg-black/60 backdrop-blur-[4px]"
+              >
+                <span
+                  class="font-mono text-xs tracking-widest text-zinc-900 dark:text-medical-white uppercase flex items-center gap-3"
+                >
+                  [ CHECK CASE STUDY ]
+                  <iconify-icon
+                    icon="solar:arrow-right-linear"
+                    class="text-[16px] transition-transform group-hover/card:translate-x-1"
+                  ></iconify-icon>
+                </span>
+              </div>
+              <div
+                class="absolute top-4 left-4 z-30 opacity-100 group-hover/card:opacity-0 transition-opacity duration-[400ms] ease-clinical"
+              >
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-zinc-100/90 dark:bg-zinc-900/90 text-zinc-900 dark:text-medical-white rounded-sm border border-medical-borderLight dark:border-medical-border backdrop-blur-md block"
+                  >CASE_006</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ABOUT: PATIENT PROFILE -->
+      <section class="mb-32 reveal transition-all duration-700 ease-clinical">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div class="relative group">
+            <div
+              class="absolute -inset-4 bg-zinc-100 dark:bg-zinc-900/50 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-clinical -z-10"
+            ></div>
+            <div
+              class="relative aspect-[4/5] overflow-hidden rounded-sm border border-medical-borderLight dark:border-medical-border bg-zinc-200 dark:bg-zinc-900"
+            >
+              <div
+                class="absolute top-4 left-4 w-2 h-2 border-t border-l border-zinc-500 dark:border-zinc-400 z-20"
+              ></div>
+              <div
+                class="absolute top-4 right-4 w-2 h-2 border-t border-r border-zinc-500 dark:border-zinc-400 z-20"
+              ></div>
+              <div
+                class="absolute bottom-4 left-4 w-2 h-2 border-b border-l border-zinc-500 dark:border-zinc-400 z-20"
+              ></div>
+              <div
+                class="absolute bottom-4 right-4 w-2 h-2 border-b border-r border-zinc-500 dark:border-zinc-400 z-20"
+              ></div>
+
+              <span
+                class="absolute top-4 left-8 font-mono text-[10px] text-medical-teal z-20 mix-blend-difference"
+                >SCAN_ID: 8042</span
+              >
+              <span
+                class="absolute top-4 right-8 font-mono text-[10px] text-medical-teal z-20 mix-blend-difference"
+                >CORTEX_LOGIC</span
+              >
+
+              <div class="w-full h-full flex items-center justify-center">
+                <img
+                  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3b2a6e4d-0fef-46c0-a94c-a0e61b175358_1600w.jpg"
+                  alt="Patient Profile"
+                  class="group-hover:scale-[1.03] transition-transform duration-700 ease-clinical w-full h-full object-cover"
+                />
+              </div>
+
+              <svg
+                class="absolute inset-0 w-full h-full z-10 pointer-events-none mix-blend-overlay opacity-30"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0,50 L20,50 L25,40 L30,60 L35,20 L40,80 L45,50 L100,50"
+                  stroke="currentColor"
+                  stroke-width="0.5"
+                  fill="none"
+                  class="text-white vector-path"
+                  vector-effect="non-scaling-stroke"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-8">
+            <div
+              class="inline-block px-3 py-1 border border-medical-borderLight dark:border-medical-border rounded-full self-start"
+            >
+              <span
+                class="text-[10px] uppercase dark:text-zinc-400 text-zinc-500 tracking-widest font-mono"
+                >[ MY PROFILE ]</span
+              >
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <h3
+                class="font-serif text-4xl md:text-5xl tracking-tight text-zinc-900 dark:text-medical-white"
+              >
+                Precision in Structure.
+              </h3>
+              <h4
+                class="md:text-4xl dark:text-zinc-400 text-3xl italic text-zinc-500 font-serif"
+              >
+                Chaos in Expression.
+              </h4>
+            </div>
+
+            <p
+              class="dark:text-zinc-300 leading-relaxed text-lg text-zinc-600 font-sans"
+            >
+              I approach design not as decoration, but as a surgical
+              intervention. Every pixel is a cell, every interaction a neural
+              pathway. My background in clinical physiology allows me to dissect
+              complex problems and reconstruct them into intuitive,
+              high-performance digital organisms.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div
+                class="p-6 border border-medical-borderLight dark:border-medical-border rounded-sm hover:border-medical-teal/30 dark:hover:border-medical-teal/50 transition-colors duration-300"
+              >
+                <span
+                  class="block dark:text-medical-white text-3xl text-zinc-900 font-serif mb-1"
+                  >4+ Years</span
+                >
+                <span class="uppercase text-xs text-zinc-500 font-mono"
+                  >design Practice</span
+                >
+              </div>
+              <div
+                class="p-6 border border-medical-borderLight dark:border-medical-border rounded-sm hover:border-medical-teal/30 dark:hover:border-medical-teal/50 transition-colors duration-300"
+              >
+                <span
+                  class="block dark:text-medical-white text-3xl text-zinc-900 font-serif mb-1"
+                  >20+ Ops</span
+                >
+                <span class="uppercase text-xs text-zinc-500 font-mono"
+                  >Successful Operations</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SKILLS: INSTRUMENTATION & SYSTEMS -->
+      <section
+        id="lab"
+        class="mb-32 reveal transition-all duration-700 ease-clinical"
+      >
+        <div
+          class="flex items-end justify-between border-b border-medical-borderLight dark:border-medical-border pb-6 mb-12"
+        >
+          <h2
+            class="dark:text-medical-white text-4xl text-zinc-900 tracking-tight font-serif"
+          >
+            Skill sets
+          </h2>
+          <span class="font-mono text-xs text-zinc-500"
+            >SYSTEM CALIBRATION: 99.8%</span
+          >
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="group relative p-6 bg-zinc-100 dark:bg-zinc-900/40 border border-medical-borderLight dark:border-medical-border rounded-sm cursor-pointer transition-all duration-250 ease-clinical hover:-translate-y-1 hover:border-medical-teal/30 active:scale-[0.98]"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-[1px] bg-medical-teal scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 will-change-transform transform-gpu"
+            ></div>
+
+            <div class="flex justify-between items-start mb-8">
+              <span class="font-mono text-[10px] text-zinc-500"
+                >TOOL_SET_01</span
+              >
+              <iconify-icon
+                icon="solar:pen-linear"
+                class="text-[16px] text-medical-teal transition-transform duration-250 group-hover:scale-110"
+              ></iconify-icon>
+            </div>
+
+            <h3
+              class="dark:text-medical-white text-lg font-medium text-zinc-900 font-sans mb-6"
+            >
+              User Interface Design
+            </h3>
+
+            <div class="flex items-end gap-1 h-8 mb-8">
+              <div class="w-1.5 bg-medical-teal/20 h-[40%]"></div>
+              <div class="w-1.5 bg-medical-teal/40 h-[60%]"></div>
+              <div class="w-1.5 bg-medical-teal/60 h-[80%]"></div>
+              <div
+                class="w-1.5 bg-medical-teal h-[100%] animate-[pulse_3s_ease-in-out_infinite]"
+              ></div>
+              <div class="w-1.5 bg-medical-teal/80 h-[90%]"></div>
+            </div>
+
+            <div
+              class="flex flex-col gap-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">FIGMA</span
+                ><span class="">V125.1.2</span>
+              </div>
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">DESIGN SYSTEMS</span
+                ><span>ATOMIC</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-zinc-500">PROTOTYPING</span
+                ><span class="">HIGH-FI</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 bg-zinc-100 dark:bg-zinc-900/40 border border-medical-borderLight dark:border-medical-border rounded-sm cursor-pointer transition-all duration-250 ease-clinical hover:-translate-y-1 hover:border-medical-blue/30 active:scale-[0.98]"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-[1px] bg-medical-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 will-change-transform transform-gpu"
+            ></div>
+            <div class="flex justify-between items-start mb-8">
+              <span class="font-mono text-[10px] text-zinc-500"
+                >TOOL_SET_02</span
+              >
+              <iconify-icon
+                icon="solar:code-square-linear"
+                class="text-[16px] text-medical-blue transition-transform duration-250 group-hover:scale-110"
+              ></iconify-icon>
+            </div>
+            <h3
+              class="dark:text-medical-white text-lg font-medium text-zinc-900 font-sans mb-6"
+            >
+              Basic Frontend Anatomy
+            </h3>
+            <div class="flex items-end gap-1 h-8 mb-8">
+              <div
+                class="w-1.5 bg-medical-blue h-[100%] animate-[pulse_4s_ease-in-out_infinite]"
+              ></div>
+              <div class="w-1.5 bg-medical-blue/80 h-[80%]"></div>
+              <div class="w-1.5 bg-medical-blue/60 h-[60%]"></div>
+              <div class="w-1.5 bg-medical-blue/40 h-[40%]"></div>
+              <div class="w-1.5 bg-medical-blue/20 h-[30%]"></div>
+            </div>
+            <div
+              class="flex flex-col gap-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">REACT/VUE</span
+                ><span class="">MODULAR</span>
+              </div>
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">TAILWIND</span
+                ><span class="">UTILITY</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-zinc-500">WEBGL</span
+                ><span class="">THREE.JS</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 bg-zinc-100 dark:bg-zinc-900/40 border border-medical-borderLight dark:border-medical-border rounded-sm cursor-pointer transition-all duration-250 ease-clinical hover:-translate-y-1 hover:border-medical-lime/30 active:scale-[0.98]"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-[1px] bg-medical-lime scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 will-change-transform transform-gpu"
+            ></div>
+            <div class="flex justify-between items-start mb-8">
+              <span class="font-mono text-[10px] text-zinc-500"
+                >TOOL_SET_03</span
+              >
+              <iconify-icon
+                icon="solar:test-tube-linear"
+                class="text-[16px] text-medical-lime transition-transform duration-250 group-hover:scale-110"
+              ></iconify-icon>
+            </div>
+            <h3
+              class="dark:text-medical-white text-lg font-medium text-zinc-900 font-sans mb-6"
+            >
+              User Diagnostics
+            </h3>
+            <div class="flex items-end gap-1 h-8 mb-8">
+              <div class="w-1.5 bg-medical-lime/40 h-[50%]"></div>
+              <div class="w-1.5 bg-medical-lime/60 h-[70%]"></div>
+              <div class="w-1.5 bg-medical-lime h-[90%]"></div>
+              <div
+                class="w-1.5 bg-medical-lime/80 h-[80%] animate-[pulse_2.5s_ease-in-out_infinite]"
+              ></div>
+              <div class="w-1.5 bg-medical-lime/50 h-[60%]"></div>
+            </div>
+            <div
+              class="flex flex-col gap-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">TESTING</span><span>A/B</span>
+              </div>
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">ANALYTICS</span><span>DATA</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-zinc-500">HEURISTICS</span><span>AUDIT</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 bg-zinc-100 dark:bg-zinc-900/40 border border-medical-borderLight dark:border-medical-border rounded-sm cursor-pointer transition-all duration-250 ease-clinical hover:-translate-y-1 hover:border-medical-violet/30 active:scale-[0.98]"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-[1px] bg-medical-violet scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 will-change-transform transform-gpu"
+            ></div>
+            <div class="flex justify-between items-start mb-8">
+              <span class="font-mono text-[10px] text-zinc-500"
+                >TOOL_SET_04</span
+              >
+              <iconify-icon
+                icon="solar:pulse-linear"
+                class="text-[16px] text-medical-violet transition-transform duration-250 group-hover:scale-110"
+              ></iconify-icon>
+            </div>
+            <h3
+              class="dark:text-medical-white text-lg font-medium text-zinc-900 font-sans mb-6"
+            >
+              Interaction Design
+            </h3>
+            <div class="flex items-end gap-1 h-8 mb-8">
+              <div class="w-1.5 bg-medical-violet/20 h-[30%]"></div>
+              <div
+                class="w-1.5 bg-medical-violet/40 h-[50%] animate-[pulse_2s_ease-in-out_infinite]"
+              ></div>
+              <div class="w-1.5 bg-medical-violet/60 h-[80%]"></div>
+              <div class="w-1.5 bg-medical-violet/80 h-[60%]"></div>
+              <div class="w-1.5 bg-medical-violet h-[100%]"></div>
+            </div>
+            <div
+              class="flex flex-col gap-2 font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+            >
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">AFTER EFFECTS</span
+                ><span>KEYFRAME</span>
+              </div>
+              <div
+                class="flex justify-between border-b border-medical-borderLight dark:border-medical-border pb-1"
+              >
+                <span class="text-zinc-500">FIGMA</span><span>MOTION</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-zinc-500">LOTTIE</span><span>JSON</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. EXPERIENCE: CLINICAL HISTORY -->
+      <section
+        class="mb-32 max-w-4xl mx-auto reveal transition-all duration-700 ease-clinical"
+      >
+        <div class="text-center mb-16">
+          <span
+            class="font-mono text-xs text-zinc-500 uppercase tracking-widest block mb-4"
+          >
+            DESIGN JOURNEY
+          </span>
+        </div>
+
+        <div
+          class="border-medical-borderLight dark:border-medical-border md:ml-8 border-l ml-4 pb-8 relative space-y-16"
+        >
+          <div class="md:pl-16 group pl-8 relative">
+            <div
+              class="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-medical-black transition-colors duration-300 shadow-[0_0_0_4px_#f5f5f7] dark:shadow-[0_0_0_4px_#0a0a0a]"
+            ></div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+              <h3
+                class="font-serif text-2xl md:text-3xl text-zinc-900 dark:text-medical-white"
+              >
+                Junior Designer
+              </h3>
+              <div
+                class="inline-flex items-center border border-medical-borderLight dark:border-medical-border rounded-full px-3 py-1 bg-zinc-100 dark:bg-zinc-900/50"
+              >
+                <span class="text-[10px] text-zinc-500 font-mono"
+                  >ERILEARN ACADEMY • 2024</span
+                >
+              </div>
+            </div>
+            <p
+              class="dark:text-zinc-400 leading-relaxed text-zinc-600 font-sans max-w-2xl mb-4"
+            >
+              Early stage residency focused on mobile application anatomy.
+              Assisted in the birth of one major iOS products.
+            </p>
+          </div>
+          <div class="md:pl-16 group pl-8 relative">
+            <div
+              class="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-medical-black group-hover:bg-medical-blue group-hover:border-medical-blue transition-colors duration-300 shadow-[0_0_0_4px_#f5f5f7] dark:shadow-[0_0_0_4px_#0a0a0a]"
+            ></div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+              <h3
+                class="font-serif text-2xl md:text-3xl text-zinc-900 dark:text-medical-white"
+              >
+                Interface Designer
+              </h3>
+              <div
+                class="inline-flex items-center border border-medical-borderLight dark:border-medical-border rounded-full px-3 py-1 bg-zinc-100 dark:bg-zinc-900/50"
+              >
+                <span class="text-[10px] text-medical-blue font-mono"
+                  >GATAAMA GROUP • 2024</span
+                >
+              </div>
+            </div>
+            <p
+              class="font-sans text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4 max-w-2xl"
+            >
+              Designed a fully animated, editorial experience that reframes
+              Africa as self-organising, capable, and globally confident.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="font-mono text-[10px] px-2 py-1 bg-zinc-200 dark:bg-zinc-800 rounded-sm text-zinc-700 dark:text-zinc-300"
+                >UI DESIGN</span
+              >
+              <span
+                class="text-[10px] dark:bg-zinc-800 dark:text-zinc-300 text-zinc-700 font-mono bg-zinc-200 rounded-sm pt-1 pr-2 pb-1 pl-2"
+                >INTERACTION DESIGN</span
+              >
+            </div>
+          </div>
+          <div class="relative pl-8 md:pl-16 group">
+            <div
+              class="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-medical-black group-hover:bg-medical-teal group-hover:border-medical-teal transition-colors duration-300 shadow-[0_0_0_4px_#f5f5f7] dark:shadow-[0_0_0_4px_#0a0a0a]"
+            ></div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+              <h3
+                class="font-serif text-2xl md:text-3xl text-zinc-900 dark:text-medical-white"
+              >
+                Lead Product Designer
+              </h3>
+              <div
+                class="inline-flex border-medical-borderLight dark:border-medical-border dark:bg-zinc-900/50 bg-zinc-100 border rounded-full pt-1 pr-3 pb-1 pl-3 items-center"
+              >
+                <span class="text-[10px] text-medical-teal font-mono"
+                  >PAY WITH PLAY ENTERPRISE • 2025</span
+                >
+              </div>
+            </div>
+            <p
+              class="font-sans text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4 max-w-2xl"
+            >
+              Lead the diagnostic team in restructuring legacy banking
+              interfaces. Conducted extensive user biopsies to identify friction
+              points and deployed a new atomic design system.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="font-mono text-[10px] px-2 py-1 bg-zinc-200 dark:bg-zinc-800 rounded-sm text-zinc-700 dark:text-zinc-300"
+                >LEADERSHIP</span
+              >
+              <span
+                class="font-mono text-[10px] px-2 py-1 bg-zinc-200 dark:bg-zinc-800 rounded-sm text-zinc-700 dark:text-zinc-300"
+                >STRATEGY</span
+              >
+              <span
+                class="text-[10px] dark:bg-zinc-800 dark:text-zinc-300 text-zinc-700 font-mono bg-zinc-200 rounded-sm pt-1 pr-2 pb-1 pl-2"
+                >USER RESEARCH</span
+              >
+            </div>
+          </div>
+
+          <div class="relative pl-8 md:pl-16 group">
+            <div
+              class="absolute -left-[5px] top-1.5 w-[9px] h-[9px] rounded-full border border-zinc-400 dark:border-zinc-500 bg-white dark:bg-medical-black group-hover:bg-medical-violet group-hover:border-medical-violet transition-colors duration-300 shadow-[0_0_0_4px_#f5f5f7] dark:shadow-[0_0_0_4px_#0a0a0a]"
+            ></div>
+            <div class="flex flex-col md:flex-row md:items-center gap-4 mb-4">
+              <h3
+                class="font-serif text-2xl md:text-3xl text-zinc-900 dark:text-medical-white"
+              >
+                Senior Product Systems Designer
+              </h3>
+              <div
+                class="inline-flex border-medical-borderLight dark:border-medical-border dark:bg-zinc-900/50 bg-zinc-100 border rounded-full pt-1 pr-3 pb-1 pl-3 items-center"
+              >
+                <span class="text-[10px] text-medical-violet font-mono"
+                  >FREELANCE • 2025-PRESENT</span
+                >
+              </div>
+            </div>
+            <p
+              class="font-sans text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4 max-w-2xl"
+            >
+              Led early-stage interface diagnostics for emerging digital
+              products, focusing on usability architecture and modular design
+              thinking. Established foundational UX systems later adopted across
+              multiple client platforms.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="text-[10px] dark:bg-zinc-800 dark:text-zinc-300 text-zinc-700 font-mono bg-zinc-200 rounded-sm pt-1 pr-2 pb-1 pl-2"
+                >PRODUCT_ARCHITECTURE</span
+              ><span
+                class="font-mono text-[10px] px-2 py-1 bg-zinc-200 dark:bg-zinc-800 rounded-sm text-zinc-700 dark:text-zinc-300"
+                >UX_STRATEGY</span
+              >
+              <span
+                class="font-mono text-[10px] px-2 py-1 bg-zinc-200 dark:bg-zinc-800 rounded-sm text-zinc-700 dark:text-zinc-300"
+                >SYSTEMS_THINKING</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. CASE STUDIES: CASE FILES -->
+      <section
+        id="cases"
+        class="mb-32 reveal transition-all duration-700 ease-clinical"
+      >
+        <div
+          class="flex items-end justify-between border-b border-medical-borderLight dark:border-medical-border pb-6 mb-16"
+        >
+          <h2
+            class="font-serif text-5xl tracking-tight text-zinc-900 dark:text-medical-white"
+          >
+            Case Files
+          </h2>
+          <div class="flex items-center gap-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-medical-red"></div>
+            <span class="font-mono text-xs text-medical-red tracking-wider"
+              >CONFIDENTIAL DATA // AUTH REQ</span
+            >
+          </div>
+        </div>
+
+        <div class="space-y-24">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center group relative will-change-transform transform-gpu transition-all duration-[400ms] ease-clinical hover:-translate-y-[2px] hover:scale-[1.01] active:duration-[150ms] active:scale-[0.985]"
+          >
+            <div
+              class="absolute inset-0 z-50 pointer-events-none overflow-hidden rounded-sm"
+            >
+              <div
+                class="w-[150%] h-full bg-gradient-to-r from-transparent via-black dark:via-white to-transparent mix-blend-overlay opacity-0 group-hover:animate-clinical-sweep"
+              ></div>
+            </div>
+
+            <div
+              class="lg:col-span-5 flex flex-col gap-6 order-2 lg:order-1 opacity-[0.96] group-hover:opacity-100 transition-opacity duration-[400ms] ease-clinical relative z-10"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-medical-blue/10 text-medical-blue rounded-sm border border-medical-blue/20"
+                  >CASE_001</span
+                >
+                <span class="text-[10px] uppercase text-zinc-500 font-mono"
+                  >AFRICA UPLIFTING AFRICA</span
+                >
+              </div>
+
+              <h3
+                class="md:text-5xl dark:text-medical-white leading-[1.1] text-4xl text-zinc-900 tracking-tight font-serif"
+              >
+                Design Uprise Africa Website
+              </h3>
+
+              <p
+                class="dark:text-zinc-400 leading-relaxed text-zinc-600 font-sans"
+              >
+                Designing an adaptive ecosystem where ideas evolve into scalable
+                community impact. A study in resilience, growth, and
+                human-centered innovation.
+              </p>
+
+              <div
+                class="grid grid-cols-2 gap-y-4 gap-x-8 border-t border-b border-medical-borderLight dark:border-medical-border py-6 my-2"
+              >
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1">
+                    TIMELINE
+                  </span>
+                  <span
+                    class="font-mono text-xs text-zinc-900 dark:text-medical-white"
+                  >
+                    12 WEEKS
+                  </span>
+                </div>
+
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1">
+                    ROLE
+                  </span>
+                  <span
+                    class="dark:text-medical-white text-xs text-zinc-900 font-mono"
+                  >
+                    PRODUCT DESIGNER
+                  </span>
+                </div>
+
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1">
+                    IMPACT
+                  </span>
+                  <span class="font-mono text-xs text-medical-lime">
+                    +240% ENGAGEMENT
+                  </span>
+                </div>
+
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1">
+                    STATUS
+                  </span>
+                  <span
+                    class="dark:text-medical-white text-xs text-zinc-900 font-mono"
+                  >
+                    LIVE PROJECT
+                  </span>
+                </div>
+              </div>
+
+              <a
+                target="_blank"
+                href=""
+                class="inline-flex items-center gap-3 dark:text-medical-white hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical self-start text-xs text-zinc-900 font-mono mt-2"
+              >
+                [ OPEN FILE ]
+                <iconify-icon
+                  icon="solar:arrow-right-linear"
+                  class="text-[16px] transition-transform group-hover:translate-x-1"
+                ></iconify-icon>
+              </a>
+            </div>
+
+            <div class="lg:col-span-7 order-1 lg:order-2 relative z-10">
+              <div
+                class="aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden relative group-hover:border-medical-blue/30 transition-colors duration-[400ms] ease-clinical"
+              >
+                <div
+                  class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+                ></div>
+
+                <img
+                  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3755ff81-ae9a-48a2-86ca-2a61d4be16f2_3840w.png"
+                  alt="Gataama Interface Mockup"
+                  class="transition-all duration-[400ms] ease-clinical group-hover:scale-[1.03] group-hover:contrast-[1.02] group-hover:brightness-[1.02] w-full h-full object-cover"
+                />
+
+                <div
+                  class="absolute bottom-4 right-4 bg-medical-black text-medical-white font-mono text-[10px] p-3 border border-medical-border shadow-lg z-20"
+                >
+                  USER GROWTH<br />
+                  <span class="text-medical-lime text-lg">▲ 42.5%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center group relative will-change-transform transform-gpu transition-all duration-[400ms] ease-clinical hover:-translate-y-[2px] hover:scale-[1.01] active:duration-[150ms] active:scale-[0.985]"
+          >
+            <div
+              class="absolute inset-0 z-50 pointer-events-none overflow-hidden rounded-sm"
+            >
+              <div
+                class="w-[150%] h-full bg-gradient-to-r from-transparent via-black dark:via-white to-transparent mix-blend-overlay opacity-0 group-hover:animate-clinical-sweep"
+              ></div>
+            </div>
+
+            <div
+              class="lg:col-span-5 flex flex-col gap-6 order-2 lg:order-1 opacity-[0.96] group-hover:opacity-100 transition-opacity duration-[400ms] ease-clinical relative z-10"
+            >
+              <div class="flex items-center gap-3">
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-medical-blue/10 text-medical-blue rounded-sm border border-medical-blue/20"
+                  >CASE_002</span
+                >
+                <span class="font-mono text-[10px] text-zinc-500 uppercase"
+                  >AI SOLUTIONS X ENTERPRISE</span
+                >
+              </div>
+
+              <h3
+                class="font-serif text-4xl md:text-5xl tracking-tight text-zinc-900 dark:text-medical-white leading-[1.1]"
+              >
+                Pay With Play AI Solutions
+              </h3>
+
+              <p
+                class="dark:text-zinc-400 leading-relaxed text-zinc-600 font-sans"
+              >
+                Designing the trust layer between users and digital
+                transactions. A study in behavioral design, financial
+                transparency, and frictionless interaction.
+              </p>
+
+              <div
+                class="grid grid-cols-2 gap-y-4 gap-x-8 border-t border-b border-medical-borderLight dark:border-medical-border py-6 my-2"
+              >
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >DURATION</span
+                  >
+                  <span
+                    class="font-mono text-xs text-zinc-900 dark:text-medical-white"
+                    >8 WEEKS</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >ROLE</span
+                  >
+                  <span
+                    class="dark:text-medical-white text-xs text-zinc-900 font-mono"
+                    >USER RESEARCHER, STRATEGIST, UI INTERFACE DESIGNER</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >OUTCOME</span
+                  >
+                  <span
+                    class="font-mono text-xs text-zinc-900 dark:text-medical-white"
+                    >PROTOTYPE VALIDATION</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >STATUS</span
+                  >
+                  <span class="text-xs text-zinc-500 font-mono">DEPLOYED</span>
+                </div>
+              </div>
+
+              <a
+                href="#"
+                class="inline-flex items-center gap-3 font-mono text-xs text-zinc-900 dark:text-medical-white hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical self-start mt-2"
+              >
+                [ OPEN FILE ]
+                <iconify-icon
+                  icon="solar:arrow-right-linear"
+                  class="text-[16px] transition-transform group-hover:translate-x-1"
+                ></iconify-icon>
+              </a>
+            </div>
+
+            <div class="lg:col-span-7 order-1 lg:order-2 relative z-10">
+              <div
+                class="aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden relative group-hover:border-medical-blue/30 transition-colors duration-[400ms] ease-clinical"
+              >
+                <div
+                  class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+                ></div>
+
+                <img
+                  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/7e105e6a-8dc9-48bb-ba5c-ab9ef2a87e4e_3840w.png"
+                  alt="Pay With Play Interface"
+                  class="transition-all duration-[400ms] ease-clinical group-hover:scale-[1.03] group-hover:contrast-[1.02] group-hover:brightness-[1.02] w-full h-full object-cover"
+                />
+
+                <div
+                  class="absolute bottom-4 right-4 bg-medical-black text-medical-white font-mono text-[10px] p-3 border border-medical-border shadow-lg z-20"
+                >
+                  RELIABILITY<br />
+                  <span class="text-medical-white text-lg">99.9%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center group relative will-change-transform transform-gpu transition-all duration-[400ms] ease-clinical hover:-translate-y-[2px] hover:scale-[1.01] active:duration-[150ms] active:scale-[0.985]"
+          >
+            <div
+              class="absolute inset-0 z-50 pointer-events-none overflow-hidden rounded-sm"
+            >
+              <div
+                class="w-[150%] h-full bg-gradient-to-r from-transparent via-black dark:via-white to-transparent mix-blend-overlay opacity-0 group-hover:animate-clinical-sweep"
+              ></div>
+            </div>
+
+            <div
+              class="lg:col-span-5 flex flex-col gap-6 order-2 lg:order-1 group-hover:opacity-100 transition-opacity duration-[400ms] ease-clinical z-10 opacity-[0.96] relative gap-x-6 gap-y-6"
+            >
+              <div class="flex gap-x-3 gap-y-3 items-center">
+                <span
+                  class="font-mono text-[10px] px-2 py-1 bg-medical-blue/10 text-medical-blue rounded-sm border border-medical-blue/20"
+                  >CASE_003</span
+                >
+                <span class="text-[10px] uppercase text-zinc-500 font-mono"
+                  >GATAAMA GROUP</span
+                >
+              </div>
+
+              <h3
+                class="md:text-5xl dark:text-medical-white leading-[1.1] text-4xl text-zinc-900 tracking-tight font-serif"
+              >
+                Redesigned Gataama Website
+              </h3>
+
+              <p
+                class="dark:text-zinc-400 leading-relaxed text-zinc-600 font-sans"
+              >
+                Redesigned the finicial experince to replace confusion with
+                confidence transforming complex data into actionable clarity
+              </p>
+
+              <div
+                class="grid grid-cols-2 border-medical-borderLight dark:border-medical-border border-t border-b mt-2 mb-2 pt-6 pb-6 gap-x-8 gap-y-4"
+              >
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >DURATION</span
+                  >
+                  <span
+                    class="dark:text-medical-white text-xs text-zinc-900 font-mono"
+                    >16 WEEKS</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >ROLE</span
+                  >
+                  <span
+                    class="dark:text-medical-white text-xs text-zinc-900 font-mono"
+                    >PRODUCT DESIGNER</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >OUTCOME</span
+                  >
+                  <span class="font-mono text-xs text-medical-lime"
+                    >100% ADOPTION</span
+                  >
+                </div>
+                <div class="">
+                  <span class="block font-mono text-[10px] text-zinc-500 mb-1"
+                    >STATUS</span
+                  >
+                  <span
+                    class="font-mono text-xs text-zinc-900 dark:text-medical-white"
+                    >LIVE</span
+                  >
+                </div>
+              </div>
+
+              <a
+                target="_blank"
+                href="./HTML/gataamaproject.html"
+                class="inline-flex items-center gap-3 dark:text-medical-white hover:text-[#2DD4BF] dark:hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical self-start text-xs text-zinc-900 font-mono mt-2"
+              >
+                [ OPEN FILE ]
+                <iconify-icon
+                  icon="solar:arrow-right-linear"
+                  class="text-[16px] transition-transform group-hover:translate-x-1"
+                ></iconify-icon>
+              </a>
+            </div>
+
+            <div class="lg:col-span-7 order-1 lg:order-2 relative z-10">
+              <div
+                class="aspect-[16/10] bg-zinc-200 dark:bg-zinc-900 border border-medical-borderLight dark:border-medical-border rounded-sm overflow-hidden relative group-hover:border-medical-blue/30 transition-colors duration-[400ms] ease-clinical"
+              >
+                <div
+                  class="absolute inset-0 bg-black/5 dark:bg-black/40 group-hover:opacity-0 transition-opacity duration-[400ms] z-10 pointer-events-none"
+                ></div>
+
+                <img
+                  src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/ec1cde50-f04e-45f8-b5ec-4553d69d351f_3840w.png"
+                  alt="System Interface"
+                  class="transition-all duration-[400ms] ease-clinical group-hover:scale-[1.03] group-hover:contrast-[1.02] group-hover:brightness-[1.02] w-full h-full object-cover"
+                />
+
+                <div
+                  class="absolute bottom-4 right-4 bg-medical-black text-medical-white font-mono text-[10px] p-3 border border-medical-border shadow-lg z-20"
+                >
+                  SYSTEM EFFICIENCY<br />
+                  <span class="text-medical-lime text-lg">▲ 68.4%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DESIGN PROCESS: METHODOLOGY -->
+      <section class="mb-32 reveal transition-all duration-700 ease-clinical">
+        <div class="text-center mb-16 md:mb-24">
+          <div
+            class="font-mono text-xs uppercase tracking-widest text-zinc-500 mb-4"
+          >
+            Design Workflow
+          </div>
+
+          <h2
+            class="font-serif text-4xl md:text-5xl tracking-tight leading-[1.1] font-light text-zinc-900 dark:text-medical-white"
+          >
+            Process
+          </h2>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 border border-medical-borderLight dark:border-medical-border divide-y lg:divide-y-0 lg:divide-x divide-medical-borderLight dark:divide-medical-border bg-white dark:bg-medical-black"
+        >
+          <!-- STEP 1 -->
+          <div
+            class="relative p-6 md:p-8 group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors duration-[400ms] ease-clinical hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.02)] overflow-hidden z-0 hover:z-10"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-0.5 bg-medical-lime origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-[400ms] ease-clinical delay-[50ms]"
+            ></div>
+
+            <div
+              class="h-full flex flex-col justify-start transition-transform duration-[400ms] ease-clinical group-hover:-translate-y-2"
+            >
+              <div
+                class="flex justify-between items-start mb-12 transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[80ms]"
+              >
+                <span
+                  class="px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 font-mono text-xs uppercase tracking-widest text-medical-lime"
+                >
+                  Discovery
+                </span>
+
+                <span
+                  class="dark:text-zinc-800 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-[400ms] ease-in-out text-4xl font-medium text-zinc-200 tracking-tight font-serif"
+                >
+                  01
+                </span>
+              </div>
+
+              <h3
+                class="leading-[1.2] dark:text-medical-white transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[120ms] text-xl font-light text-zinc-900 tracking-tight font-serif mb-4"
+              >
+                Research
+              </h3>
+
+              <p
+                class="leading-relaxed transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[160ms] text-sm font-light text-zinc-500 font-sans"
+              >
+                Understanding users, business goals, and market opportunities
+                through interviews, audits, and product analysis.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div
+            class="relative p-6 md:p-8 group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors duration-[400ms] ease-clinical hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.02)] overflow-hidden z-0 hover:z-10"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-0.5 bg-medical-blue origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-[400ms] ease-clinical delay-[50ms]"
+            ></div>
+
+            <div
+              class="h-full flex flex-col justify-start transition-transform duration-[400ms] ease-clinical group-hover:-translate-y-2"
+            >
+              <div
+                class="flex justify-between items-start mb-12 transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[80ms]"
+              >
+                <span
+                  class="px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 font-mono text-xs uppercase tracking-widest text-medical-blue"
+                >
+                  Strategy
+                </span>
+
+                <span
+                  class="dark:text-zinc-800 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-[400ms] ease-in-out text-4xl font-medium text-zinc-200 tracking-tight font-serif"
+                >
+                  02
+                </span>
+              </div>
+
+              <h3
+                class="leading-[1.2] dark:text-medical-white transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[120ms] text-xl font-light text-zinc-900 tracking-tight font-serif mb-4"
+              >
+                Problem Framing
+              </h3>
+
+              <p
+                class="leading-relaxed transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[160ms] text-sm font-light text-zinc-500 font-sans"
+              >
+                Defining user pain points, mapping experiences, and building a
+                clear direction for the product solution.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div
+            class="relative p-6 md:p-8 group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors duration-[400ms] ease-clinical hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.02)] overflow-hidden z-0 hover:z-10"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-0.5 bg-medical-teal origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-[400ms] ease-clinical delay-[50ms]"
+            ></div>
+
+            <div
+              class="flex flex-col transition-transform duration-[400ms] ease-clinical group-hover:-translate-y-2 h-full justify-start"
+            >
+              <div
+                class="flex justify-between items-start mb-12 transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[80ms]"
+              >
+                <span
+                  class="px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 font-mono text-xs uppercase tracking-widest text-medical-teal"
+                >
+                  Design
+                </span>
+
+                <span
+                  class="dark:text-zinc-800 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-[400ms] ease-in-out text-4xl font-medium text-zinc-200 tracking-tight font-serif"
+                >
+                  03
+                </span>
+              </div>
+
+              <h3
+                class="leading-[1.2] dark:text-medical-white transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[120ms] text-xl font-light text-zinc-900 tracking-tight font-serif mb-4"
+              >
+                Interface Design
+              </h3>
+
+              <p
+                class="font-sans text-sm text-zinc-500 font-light leading-relaxed transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[160ms]"
+              >
+                Creating intuitive flows, high-fidelity interfaces, prototypes,
+                and scalable design systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 4 -->
+          <div
+            class="relative p-6 md:p-8 group hover:bg-zinc-50 dark:hover:bg-zinc-900/50 transition-colors duration-[400ms] ease-clinical hover:shadow-lg dark:hover:shadow-[0_8px_30px_rgba(255,255,255,0.02)] overflow-hidden z-0 hover:z-10"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-0.5 bg-medical-violet origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-[400ms] ease-clinical delay-[50ms]"
+            ></div>
+
+            <div
+              class="flex flex-col transition-transform duration-[400ms] ease-clinical group-hover:-translate-y-2 h-full justify-start"
+            >
+              <div
+                class="flex justify-between items-start mb-12 transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[80ms]"
+              >
+                <span
+                  class="px-2 py-0.5 border border-zinc-200 dark:border-zinc-800 font-mono text-xs uppercase tracking-widest text-medical-violet"
+                >
+                  Delivery
+                </span>
+
+                <span
+                  class="dark:text-zinc-800 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-[400ms] ease-in-out text-4xl font-medium text-zinc-200 tracking-tight font-serif"
+                >
+                  04
+                </span>
+              </div>
+
+              <h3
+                class="leading-[1.2] dark:text-medical-white transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[120ms] text-xl font-light text-zinc-900 tracking-tight font-serif mb-4"
+              >
+                Launch & Optimization
+              </h3>
+
+              <p
+                class="font-sans text-sm text-zinc-500 font-light leading-relaxed transform group-hover:-translate-y-1 transition-transform duration-[300ms] ease-clinical delay-[160ms]"
+              >
+                Collaborating with developers, testing usability, and refining
+                the experience based on product feedback and analytics.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. OBSERVATIONS & FINDINGS -->
+      <section
+        class="mb-32 max-w-4xl mx-auto reveal transition-all duration-700 ease-clinical"
+      >
+        <div class="text-center mb-16">
+          <span
+            class="font-mono text-[10px] text-medical-teal uppercase tracking-widest block mb-4"
+          >
+            INSIGHTS & DESIGN THINKING
+          </span>
+        </div>
+
+        <div class="flex flex-col">
+          <!-- ARTICLE 1 -->
+          <a
+            href="#"
+            class="group py-8 border-b border-medical-borderLight dark:border-medical-border flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:bg-zinc-100 dark:hover:bg-zinc-900/20 transition-colors duration-300 px-4 -mx-4 rounded-sm"
+          >
+            <span class="font-mono text-xs text-zinc-500 w-32 shrink-0">
+              OCT 12, 23
+            </span>
+
+            <div class="flex-1">
+              <h3
+                class="font-serif text-2xl text-zinc-900 dark:text-medical-white mb-2 group-hover:text-[#2DD4BF] dark:group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+              >
+                Designing feedback that feels human.
+              </h3>
+
+              <p class="font-sans text-sm text-zinc-600 dark:text-zinc-400">
+                Exploring how subtle motion, loading states, and
+                micro-interactions shape user trust and perceived product
+                performance.
+              </p>
+            </div>
+
+            <iconify-icon
+              icon="solar:arrow-right-up-linear"
+              class="text-[20px] text-zinc-400 group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical shrink-0"
+            ></iconify-icon>
+          </a>
+
+          <!-- ARTICLE 2 -->
+          <a
+            href="#"
+            class="group py-8 border-b border-medical-borderLight dark:border-medical-border flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:bg-zinc-100 dark:hover:bg-zinc-900/20 transition-colors duration-300 px-4 -mx-4 rounded-sm"
+          >
+            <span class="font-mono text-xs text-zinc-500 w-32 shrink-0">
+              SEP 04, 23
+            </span>
+
+            <div class="flex-1">
+              <h3
+                class="font-serif text-2xl text-zinc-900 dark:text-medical-white mb-2 group-hover:text-[#2DD4BF] dark:group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+              >
+                Why simplicity is harder than complexity.
+              </h3>
+
+              <p class="font-sans text-sm text-zinc-600 dark:text-zinc-400">
+                Understanding the balance between clean interfaces, usability,
+                and information density in modern digital products.
+              </p>
+            </div>
+
+            <iconify-icon
+              icon="solar:arrow-right-up-linear"
+              class="text-[20px] text-zinc-400 group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical shrink-0"
+            ></iconify-icon>
+          </a>
+
+          <!-- ARTICLE 3 -->
+          <a
+            href="#"
+            class="group py-8 border-b border-medical-borderLight dark:border-medical-border flex flex-col md:flex-row md:items-baseline gap-4 md:gap-12 hover:bg-zinc-100 dark:hover:bg-zinc-900/20 transition-colors duration-300 px-4 -mx-4 rounded-sm"
+          >
+            <span class="font-mono text-xs text-zinc-500 w-32 shrink-0">
+              AUG 11, 23
+            </span>
+
+            <div class="flex-1">
+              <h3
+                class="font-serif text-2xl text-zinc-900 dark:text-medical-white mb-2 group-hover:text-[#2DD4BF] dark:group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical"
+              >
+                Navigation patterns users already understand.
+              </h3>
+
+              <p class="font-sans text-sm text-zinc-600 dark:text-zinc-400">
+                Studying familiar interaction models and how intuitive
+                navigation improves user confidence across digital platforms.
+              </p>
+            </div>
+
+            <iconify-icon
+              icon="solar:arrow-right-up-linear"
+              class="text-[20px] text-zinc-400 group-hover:text-[#2DD4BF] transition-colors duration-200 ease-clinical shrink-0"
+            ></iconify-icon>
+          </a>
+        </div>
+      </section>
+
+      <!-- 9. TESTIMONIALS: PEER VALIDATION -->
+      <section class="mb-32 reveal transition-all duration-700 ease-clinical">
+        <div class="text-center mb-16 relative z-10">
+          <h2
+            class="font-serif text-3xl tracking-tight text-zinc-900 dark:text-medical-white"
+          >
+            Peer Validation
+          </h2>
+        </div>
+
+        <!-- INFINITE PEER VALIDATION STREAM -->
+        <div
+          class="w-full overflow-hidden relative"
+          style="
+            -webkit-mask-image: linear-gradient(
+              to right,
+              transparent 0%,
+              black 5%,
+              black 95%,
+              transparent 100%
+            );
+            mask-image: linear-gradient(
+              to right,
+              transparent 0%,
+              black 5%,
+              black 95%,
+              transparent 100%
+            );
+          "
+        >
+          <div
+            class="flex w-max animate-clinical-marquee hover:[animation-play-state:paused]"
+          >
+            <!-- SET 1 -->
+            <div id="peer-marquee-original" class="flex gap-6 pr-6 shrink-0">
+              <!-- CARD 1 -->
+              <div
+                class="w-[320px] md:w-[450px] shrink-0 p-8 md:p-12 bg-zinc-100 dark:bg-[#080808] border border-medical-borderLight dark:border-medical-border rounded-sm flex flex-col justify-between min-h-[280px] hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical cursor-pointer group"
+              >
+                <p
+                  class="font-sans text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-300"
+                >
+                  "Blessing brought clarity to our product experience. Every
+                  screen felt intentional, clean, and genuinely built around the
+                  user."
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-zinc-300 dark:bg-zinc-800 border border-medical-borderLight dark:border-medical-border overflow-hidden"
+                  >
+                    <img
+                      src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4f288f3a-2317-4499-9e16-18c677590876_3840w.jpg"
+                      alt="James Alaba Alabi Avatar"
+                      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <span
+                      class="block dark:text-medical-white text-sm font-medium text-zinc-900 font-sans"
+                    >
+                      James Alaba Alabi
+                    </span>
+                    <span
+                      class="block text-[10px] uppercase text-zinc-500 font-mono"
+                    >
+                      CEO @ HONESTSCHOLARS
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div
+                class="md:w-[450px] shrink-0 md:p-12 dark:bg-[#080808] border-medical-borderLight dark:border-medical-border flex flex-col min-h-[280px] hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical cursor-pointer group bg-zinc-100 w-[320px] border rounded-sm pt-8 pr-8 pb-8 pl-8 justify-between"
+              >
+                <p
+                  class="font-sans text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-300"
+                >
+                  "Working with her was seamless from start to finish. The final
+                  interface looked modern, intuitive, and far beyond what we
+                  expected."
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="dark:bg-zinc-800 border-medical-borderLight dark:border-medical-border overflow-hidden flex text-zinc-500 font-serif bg-zinc-300 w-10 h-10 border rounded-full items-center justify-center"
+                  >
+                    JO
+                  </div>
+
+                  <div>
+                    <span
+                      class="block dark:text-medical-white text-sm font-medium text-zinc-900 font-sans"
+                    >
+                      Mr Jeffery Okpala
+                    </span>
+                    <span
+                      class="block text-[10px] uppercase text-zinc-500 font-mono"
+                    >
+                      PAY WITH PLAY ENTERPRISE
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div
+                class="md:w-[450px] shrink-0 md:p-12 dark:bg-[#080808] border-medical-borderLight dark:border-medical-border flex flex-col min-h-[280px] hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical cursor-pointer group bg-zinc-100 w-[320px] border rounded-sm pt-8 pr-8 pb-8 pl-8 justify-between"
+              >
+                <p
+                  class="font-sans text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-300"
+                >
+                  "A strong eye for detail and a deep understanding of user
+                  behavior. The design system she created gave our team a solid
+                  foundation to scale."
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-zinc-300 dark:bg-zinc-800 border border-medical-borderLight dark:border-medical-border overflow-hidden"
+                  >
+                    <img
+                      src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0d2f9f0d-adb5-4455-9a8c-944e7faa3720_3840w.png"
+                      alt="Brian Tesfa Avatar"
+                      class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+
+                  <div>
+                    <span
+                      class="block dark:text-medical-white text-sm font-medium text-zinc-900 font-sans"
+                    >
+                      Mr Brian Tesfa
+                    </span>
+                    <span
+                      class="block text-[10px] uppercase text-zinc-500 font-mono"
+                    >
+                      CEO @ GATAAMA GROUP
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 4 -->
+              <div
+                class="w-[320px] md:w-[450px] shrink-0 p-8 md:p-12 bg-zinc-100 dark:bg-[#080808] border border-medical-borderLight dark:border-medical-border rounded-sm flex flex-col justify-between min-h-[280px] hover:border-medical-teal/30 transition-colors duration-[400ms] ease-clinical cursor-pointer group"
+              >
+                <p
+                  class="font-sans text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed mb-8 group-hover:text-zinc-900 dark:group-hover:text-medical-white transition-colors duration-300"
+                >
+                  "She transformed a complicated workflow into something simple
+                  and easy to navigate. The improvement in usability was
+                  immediately noticeable."
+                </p>
+
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-10 h-10 rounded-full bg-zinc-300 dark:bg-zinc-800 border border-medical-borderLight dark:border-medical-border overflow-hidden flex items-center justify-center font-serif text-zinc-500"
+                  >
+                    OB
+                  </div>
+
+                  <div>
+                    <span
+                      class="block dark:text-medical-white text-sm font-medium text-zinc-900 font-sans"
+                    >
+                      Olumide David Badru
+                    </span>
+                    <span
+                      class="block text-[10px] uppercase text-zinc-500 font-mono"
+                    >
+                      Founder @ GradeVault
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SET 2: DUPLICATE FOR SEAMLESS LOOP -->
+            <div
+              id="peer-marquee-duplicate"
+              class="flex gap-6 shrink-0 pr-6"
+              aria-hidden="true"
+            >
+              <!-- Duplicate the same cards for marquee loop -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. LIVE DIAGNOSTICS (Interactive UI Demo) -->
+      <section class="mb-32 reveal transition-all duration-700 ease-clinical">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-zinc-100 dark:bg-[#050505] border border-medical-borderLight dark:border-medical-border rounded-xl p-8 md:p-16 relative overflow-hidden shadow-2xl"
+          >
+            <div
+              class="absolute -bottom-32 -right-32 w-96 h-96 bg-medical-red/10 rounded-full blur-[100px] pointer-events-none"
+            ></div>
+
+            <div class="flex items-center justify-center gap-2 mb-8">
+              <div
+                class="w-2 h-2 rounded-full bg-medical-teal animate-pulse"
+              ></div>
+
+              <span
+                class="font-mono text-[10px] text-medical-teal tracking-widest uppercase"
+              >
+                Design Preferences
+              </span>
+            </div>
+
+            <div class="text-center mb-16 relative z-10">
+              <h2
+                class="font-serif text-3xl md:text-4xl tracking-tight text-zinc-900 dark:text-medical-white mb-4"
+              >
+                Design Principles
+              </h2>
+
+              <p class="font-sans text-sm text-zinc-500">
+                A visual representation of the balance between usability,
+                clarity, and modern interface systems.
+              </p>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 relative z-10"
+            >
+              <!-- LEFT -->
+              <div
+                class="space-y-8 border-r-0 md:border-r border-medical-borderLight dark:border-medical-border md:pr-16"
+              >
+                <!-- SCALE 1 -->
+                <div>
+                  <div class="flex justify-between items-end mb-3">
+                    <span
+                      class="font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+                    >
+                      VISUAL CLARITY
+                    </span>
+
+                    <span
+                      class="font-mono text-[10px] text-medical-white bg-medical-black px-1 py-0.5 rounded border border-medical-border"
+                    >
+                      90%
+                    </span>
+                  </div>
+
+                  <div
+                    class="relative w-full h-1 bg-zinc-300 dark:bg-zinc-800 rounded-full cursor-pointer group"
+                  >
+                    <div
+                      class="absolute top-0 left-0 h-full bg-medical-teal rounded-full w-[90%] transition-all duration-300"
+                    ></div>
+
+                    <div
+                      class="absolute top-1/2 -translate-y-1/2 left-[90%] w-3 h-3 bg-white border border-zinc-300 dark:border-transparent rounded-full shadow-sm group-hover:scale-125 transition-transform duration-200"
+                    ></div>
+                  </div>
+                </div>
+
+                <!-- SCALE 2 -->
+                <div>
+                  <div class="flex justify-between items-end mb-3">
+                    <span
+                      class="font-mono text-[10px] text-zinc-600 dark:text-zinc-400"
+                    >
+                      USER EXPERIENCE
+                    </span>
+
+                    <span
+                      class="font-mono text-[10px] text-medical-white bg-medical-black px-1 py-0.5 rounded border border-medical-border"
+                    >
+                      95%
+                    </span>
+                  </div>
+
+                  <div
+                    class="relative w-full h-1 bg-zinc-300 dark:bg-zinc-800 rounded-full cursor-pointer group"
+                  >
+                    <div
+                      class="absolute top-0 left-0 h-full bg-medical-blue rounded-full w-[95%] transition-all duration-300"
+                    ></div>
+
+                    <div
+                      class="absolute top-1/2 -translate-y-1/2 left-[95%] w-3 h-3 bg-white border border-zinc-300 dark:border-transparent rounded-full shadow-sm group-hover:scale-125 transition-transform duration-200"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT -->
+              <div class="space-y-8">
+                <div
+                  class="flex justify-between items-center pb-6 border-b border-medical-borderLight dark:border-medical-border"
+                >
+                  <span
+                    class="font-mono text-xs text-zinc-700 dark:text-zinc-300"
+                  >
+                    DESIGN SYSTEM
+                  </span>
+
+                  <div
+                    id="gridToggleBtn"
+                    class="w-10 h-5 bg-medical-teal/20 rounded-full relative cursor-pointer border border-medical-teal/30 transition-colors duration-300"
+                  >
+                    <div
+                      id="gridToggleKnob"
+                      class="absolute top-0.5 right-0.5 w-4 h-4 bg-medical-teal rounded-full shadow-sm transition-transform duration-300 translate-x-0"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-center">
+                  <span
+                    class="font-mono text-xs text-zinc-700 dark:text-zinc-300"
+                  >
+                    RESPONSIVE LAYOUT
+                  </span>
+
+                  <div class="flex gap-1 h-4">
+                    <div class="w-1.5 h-full bg-medical-teal"></div>
+                    <div class="w-1.5 h-full bg-medical-teal opacity-60"></div>
+                    <div class="w-1.5 h-full bg-medical-teal opacity-30"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. CALL TO ACTION: NEXT STEPS -->
+      <section
+        class="min-h-[50vh] flex flex-col items-center justify-center text-center reveal transition-all duration-700 ease-clinical delay-150"
+      >
+        <h2
+          class="font-serif text-5xl md:text-7xl tracking-tight text-zinc-900 dark:text-medical-white mb-6"
+        >
+          Have a Product<br />in Mind?
+        </h2>
+
+        <p
+          class="font-sans text-lg text-zinc-600 dark:text-zinc-400 mb-12 max-w-xl"
+        >
+          Available for product design, user experience improvements, interface
+          redesigns, and long-term design collaborations.
+        </p>
+
+        <button
+          class="group relative px-8 py-4 bg-zinc-900 dark:bg-white text-white dark:text-black font-mono text-xs uppercase tracking-widest overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+        >
+          <span class="relative z-10 flex items-center gap-3">
+            START A PROJECT
+            <iconify-icon
+              icon="solar:arrow-right-linear"
+              class="text-[16px] group-hover:translate-x-1 transition-transform"
+            ></iconify-icon>
+          </span>
+
+          <div
+            class="absolute inset-0 bg-zinc-800 dark:bg-zinc-200 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-clinical"
+          ></div>
+        </button>
+
+        <div class="mt-8 flex gap-4 font-mono text-[10px] text-zinc-500">
+          <span>RESPONSE TIME &lt; 24HRS</span>
+          <span>|</span>
+          <span>OPEN TO COLLABORATION</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- 12. FOOTER: SYSTEM STATUS -->
+    <footer
+      id="status"
+      class="border-t border-medical-borderLight dark:border-medical-border bg-white dark:bg-medical-black relative z-10 transition-colors duration-300"
+    >
+      <!-- TOP BAR -->
+      <div
+        class="border-b border-medical-borderLight dark:border-medical-border py-3 overflow-hidden"
+      >
+        <div
+          class="flex items-center justify-between max-w-[1280px] mx-auto px-4 md:px-6 lg:px-12 font-mono text-[10px] text-zinc-500 uppercase tracking-widest whitespace-nowrap overflow-x-auto"
+        >
+          <span class="flex items-center gap-2">
+            <div
+              class="w-1.5 h-1.5 rounded-full bg-medical-teal animate-pulse"
+            ></div>
+
+            AVAILABLE FOR PROJECTS
+          </span>
+
+          <span class="ml-8">UDOH BLESSING © 2026</span>
+
+          <span class="ml-8">
+            PORTFOLIO STATUS:
+            <span class="text-zinc-900 dark:text-medical-white"> ACTIVE </span>
+          </span>
+        </div>
+      </div>
+
+      <!-- MAIN FOOTER -->
+      <div
+        class="max-w-[1280px] mx-auto px-4 md:px-6 lg:px-12 py-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+      >
+        <!-- BRAND -->
+        <div class="flex flex-col gap-2">
+          <div class="flex items-center gap-2 group cursor-pointer">
+            <div
+              class="w-2 h-2 rounded-full bg-medical-teal shadow-[0_0_8px_rgba(0,229,255,0.4)]"
+            ></div>
+
+            <span
+              class="font-mono text-xs font-medium tracking-wider text-zinc-800 dark:text-zinc-200"
+            >
+              UDOH BLESSING
+            </span>
+          </div>
+
+          <p
+            class="font-sans text-xs text-zinc-500 max-w-xs mt-2 leading-relaxed"
+          >
+            Product designer focused on crafting intuitive digital experiences,
+            modern interfaces, and user-centered products.
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div
+          class="flex flex-wrap md:flex-nowrap gap-12 font-mono text-[10px] text-zinc-500"
+        >
+          <!-- NAVIGATION -->
+          <div class="flex flex-col gap-3">
+            <span
+              class="text-zinc-900 dark:text-medical-white mb-1 uppercase tracking-widest"
+            >
+              Navigation
+            </span>
+
+            <a
+              href="#about"
+              class="hover:text-medical-teal dark:hover:text-medical-teal transition-colors duration-200"
+            >
+              ABOUT
+            </a>
+
+            <a
+              href="#projects"
+              class="hover:text-medical-teal dark:hover:text-medical-teal transition-colors duration-200"
+            >
+              PROJECTS
+            </a>
+
+            <a
+              href="#contact"
+              class="hover:text-medical-teal dark:hover:text-medical-teal transition-colors duration-200"
+            >
+              CONTACT
+            </a>
+          </div>
+
+          <!-- SOCIALS -->
+          <div class="flex flex-col gap-3">
+            <span
+              class="text-zinc-900 dark:text-medical-white mb-1 uppercase tracking-widest"
+            >
+              Socials
+            </span>
+
+            <a
+              href="#"
+              class="hover:text-medical-blue dark:hover:text-medical-blue transition-colors duration-200"
+            >
+              LINKEDIN
+            </a>
+
+            <a
+              href="#"
+              class="hover:text-medical-blue dark:hover:text-medical-blue transition-colors duration-200"
+            >
+              BEHANCE
+            </a>
+
+            <a
+              href="#"
+              class="hover:text-medical-blue dark:hover:text-medical-blue transition-colors duration-200"
+            >
+              DRIBBBLE
+            </a>
+          </div>
+
+          <!-- EXTRA -->
+          <div class="flex flex-col gap-3">
+            <span
+              class="text-zinc-900 dark:text-medical-white mb-1 uppercase tracking-widest"
+            >
+              Information
+            </span>
+
+            <a
+              href="#"
+              class="hover:text-medical-violet dark:hover:text-medical-violet transition-colors duration-200"
+            >
+              RESUME
+            </a>
+
+            <a
+              href="#"
+              class="hover:text-medical-violet dark:hover:text-medical-violet transition-colors duration-200"
+            >
+              CASE STUDIES
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FUNCTIONAL DIAGNOSTICS & SYSTEM SCRIPTS -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const html = document.documentElement;
+
+      themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+      });
+
+      window.addEventListener("scroll", () => {
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("scrollProgress").style.width = scrolled + "%";
+      });
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove("opacity-0", "translate-y-8");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".reveal").forEach((elem) => {
+        observer.observe(elem);
+      });
+
+      // Typewriter Effect for Hero Section
+      const words = ["Precision", "Systems", "Logic", "Purpose", "Empathy"];
+      let wordIndex = 0;
+      let charIndex = words[0].length; // Start with the first word already typed
+      let isDeleting = false;
+      const typewriterEl = document.getElementById("typewriter");
+
+      function type() {
+        const currentWord = words[wordIndex];
+
+        if (isDeleting) {
+          typewriterEl.textContent = currentWord.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          typewriterEl.textContent = currentWord.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        // Adaptive typing speeds
+        let typeSpeed = isDeleting ? 60 : 120;
+
+        // Pause states
+        if (!isDeleting && charIndex === currentWord.length) {
+          typeSpeed = 2500; // Time word stays on screen
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+          typeSpeed = 400; // Time before new word starts
+        }
+
+        setTimeout(type, typeSpeed);
+      }
+
+      // Initialize typewriter after a brief delay
+      setTimeout(() => {
+        isDeleting = true;
+        type();
+      }, 3000);
+
+      // Auto-clone Marquee functionality to make editing easy
+      function setupMarquee(originalId, duplicateId) {
+        const original = document.getElementById(originalId);
+        const duplicate = document.getElementById(duplicateId);
+        if (original && duplicate) {
+          duplicate.innerHTML = original.innerHTML;
+        }
+      }
+
+      // Setup both marquees
+      setupMarquee("marquee-original", "marquee-duplicate");
+      setupMarquee("peer-marquee-original", "peer-marquee-duplicate");
+
+      // Grid Toggle Logic in Diagnostics Panel
+      const gridToggleBtn = document.getElementById("gridToggleBtn");
+      const gridToggleKnob = document.getElementById("gridToggleKnob");
+      const mainGrid = document.getElementById("mainGrid");
+      let isGridActive = true;
+
+      if (gridToggleBtn && gridToggleKnob && mainGrid) {
+        gridToggleBtn.addEventListener("click", () => {
+          isGridActive = !isGridActive;
+
+          if (isGridActive) {
+            // Turn Grid ON
+            gridToggleKnob.style.transform = "translateX(0)";
+            gridToggleKnob.classList.remove("bg-zinc-400");
+            gridToggleKnob.classList.add("bg-medical-teal");
+
+            gridToggleBtn.classList.remove(
+              "bg-zinc-300",
+              "dark:bg-zinc-700",
+              "border-transparent",
+            );
+            gridToggleBtn.classList.add(
+              "bg-medical-teal/20",
+              "border-medical-teal/30",
+            );
+
+            mainGrid.style.opacity = "1";
+          } else {
+            // Turn Grid OFF
+            gridToggleKnob.style.transform = "translateX(-20px)"; // Move to left
+            gridToggleKnob.classList.remove("bg-medical-teal");
+            gridToggleKnob.classList.add("bg-zinc-400");
+
+            gridToggleBtn.classList.remove(
+              "bg-medical-teal/20",
+              "border-medical-teal/30",
+            );
+            gridToggleBtn.classList.add(
+              "bg-zinc-300",
+              "dark:bg-zinc-700",
+              "border-transparent",
+            );
+
+            mainGrid.style.opacity = "0";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
