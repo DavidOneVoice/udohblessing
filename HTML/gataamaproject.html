@@ -3,69 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gataama Website Redesign | Udoh Blessing</title>
+    <title>Gataama Website Redesign & Admin Dashboard | Udoh Blessing</title>
     <meta
       name="description"
-      content="Gataama website redesign case study by Udoh Blessing, covering UX research, product strategy, UI systems, responsive interface design, and user-centered decisions."
-    />
-    <meta
-      name="keywords"
-      content="Udoh Blessing, Product Designer, Gataama, UX Case Study, UI Design, Design Systems, Product Strategy"
+      content="A product design case study by Udoh Blessing covering the Gataama website redesign, admin dashboard, UX strategy, information architecture, design systems, usability, and responsive UI execution."
     />
     <meta name="author" content="Udoh Blessing" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#050706" />
-    <meta property="og:title" content="Gataama Website Redesign | Udoh Blessing" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      property="og:title"
+      content="Gataama Website Redesign & Admin Dashboard"
+    />
     <meta
       property="og:description"
-      content="A premium product design case study focused on creating an intuitive, modern, and culturally expressive web experience for Gataama."
+      content="Transforming an outdated and fragmented platform into a seamless, scalable, and user-centered digital experience."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Udoh Blessing Portfolio" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
         color-scheme: dark;
-        --bg: #020403;
-        --bg-soft: #070b0a;
-        --card: #0b1110;
-        --card-2: #0f1715;
-        --text: #f5f7f4;
-        --muted: #9ba59f;
-        --faint: #65716b;
-        --line: rgba(255, 255, 255, 0.09);
-        --line-strong: rgba(255, 255, 255, 0.15);
-        --accent: #11f5e8;
-        --accent-2: #77ff80;
-        --accent-soft: rgba(17, 245, 232, 0.14);
-        --danger: #ff483f;
-        --gold: #ffb84c;
-        --shadow: 0 26px 90px rgba(0, 0, 0, 0.56);
+        --bg: #000;
+        --bg-elevated: #050707;
+        --panel: #0a0e0e;
+        --panel-2: #0e1414;
+        --panel-3: #111819;
+        --text: #f7f7f4;
+        --text-soft: #d2d2d4;
+        --muted: #96989f;
+        --quiet: #6d7178;
+        --line: rgba(255, 255, 255, 0.1);
+        --line-strong: rgba(255, 255, 255, 0.18);
+        --cyan: #00efff;
+        --cyan-soft: rgba(0, 239, 255, 0.12);
+        --green: #5ef56f;
+        --orange: #ff6a1a;
+        --red: #ff3030;
+        --purple: #7b61ff;
+        --shadow: 0 30px 100px rgba(0, 0, 0, 0.65);
+        --radius-xl: 34px;
+        --radius-lg: 24px;
+        --radius-md: 16px;
+        --radius-sm: 10px;
+        --wrap: 1180px;
+        --narrow: 920px;
       }
 
       html.light {
         color-scheme: light;
-        --bg: #f6f8f5;
-        --bg-soft: #ffffff;
-        --card: #ffffff;
-        --card-2: #eef4ef;
-        --text: #101615;
-        --muted: #4d5a55;
-        --faint: #75817b;
-        --line: rgba(7, 16, 13, 0.12);
-        --line-strong: rgba(7, 16, 13, 0.2);
-        --accent: #008f88;
-        --accent-2: #15803d;
-        --accent-soft: rgba(0, 143, 136, 0.12);
-        --shadow: 0 28px 80px rgba(7, 18, 14, 0.12);
+        --bg: #f7f8f6;
+        --bg-elevated: #ffffff;
+        --panel: #ffffff;
+        --panel-2: #eef2f0;
+        --panel-3: #e7ece9;
+        --text: #0a0d0d;
+        --text-soft: #252929;
+        --muted: #596061;
+        --quiet: #798183;
+        --line: rgba(0, 0, 0, 0.1);
+        --line-strong: rgba(0, 0, 0, 0.18);
+        --cyan: #008994;
+        --cyan-soft: rgba(0, 137, 148, 0.12);
+        --shadow: 0 26px 80px rgba(16, 24, 24, 0.16);
       }
 
       * {
@@ -78,12 +83,27 @@
 
       body {
         margin: 0;
+        min-width: 320px;
         background:
-          radial-gradient(circle at 50% 0%, rgba(17, 245, 232, 0.08), transparent 22rem),
-          radial-gradient(circle at 85% 12%, rgba(119, 255, 128, 0.045), transparent 20rem),
+          radial-gradient(
+            circle at 50% 14%,
+            rgba(255, 255, 255, 0.032),
+            transparent 21rem
+          ),
+          radial-gradient(
+            circle at 22% 34%,
+            rgba(0, 239, 255, 0.04),
+            transparent 27rem
+          ),
           var(--bg);
         color: var(--text);
-        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
@@ -94,17 +114,22 @@
         z-index: -2;
         pointer-events: none;
         content: "";
+        opacity: 0.18;
         background-image:
-          linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-        background-size: 46px 46px;
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.76), transparent 78%);
-      }
-
-      html.light body::before {
-        background-image:
-          linear-gradient(rgba(5, 15, 12, 0.035) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(5, 15, 12, 0.035) 1px, transparent 1px);
+          linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.026) 1px,
+            transparent 1px
+          );
+        background-size: 56px 56px;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent 0,
+          #000 18%,
+          #000 72%,
+          transparent 100%
+        );
       }
 
       body::after {
@@ -114,7 +139,7 @@
         pointer-events: none;
         content: "";
         opacity: 0.035;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       }
 
       a {
@@ -122,888 +147,1269 @@
         text-decoration: none;
       }
 
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
       button {
         font: inherit;
       }
 
-      .page-shell {
-        width: min(100%, 1160px);
-        margin: 0 auto;
-        padding: 30px clamp(18px, 5vw, 64px) 96px;
+      .top-strip {
+        height: clamp(48px, 6vw, 86px);
+        background: #1d3335;
       }
 
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        width: min(100%, 1160px);
-        margin: 0 auto;
-        padding: 18px clamp(18px, 5vw, 64px);
-        background: color-mix(in srgb, var(--bg) 82%, transparent);
-        border-bottom: 1px solid var(--line);
-        backdrop-filter: blur(18px);
-      }
-
-      .brand,
-      .eyebrow,
-      .section-kicker,
-      .metric-label,
-      .nav-link,
-      .tag,
-      .timeline-marker,
-      .caption,
-      .theme-toggle {
-        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-        letter-spacing: 0.11em;
-        text-transform: uppercase;
-      }
-
-      .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--muted);
-        font-size: 11px;
-        font-weight: 600;
-      }
-
-      .brand-dot,
-      .status-dot {
-        width: 7px;
-        height: 7px;
-        flex: 0 0 auto;
+      .skip-link {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        z-index: 20;
+        transform: translateY(-140%);
         border-radius: 999px;
-        background: var(--accent-2);
-        box-shadow: 0 0 16px color-mix(in srgb, var(--accent-2) 70%, transparent);
+        background: var(--text);
+        color: var(--bg);
+        padding: 12px 18px;
+        font-weight: 700;
+        transition: transform 180ms ease;
       }
 
-      .site-nav {
-        display: flex;
-        align-items: center;
-        gap: clamp(12px, 2vw, 26px);
+      .skip-link:focus {
+        transform: translateY(0);
       }
 
-      .nav-link,
+      .case-page {
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(100% - 36px, var(--wrap));
+        margin-inline: auto;
+      }
+
+      .container-narrow {
+        width: min(100% - 36px, var(--narrow));
+        margin-inline: auto;
+      }
+
       .theme-toggle {
-        color: var(--faint);
-        font-size: 10px;
-        transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
-      }
-
-      .nav-link:hover,
-      .theme-toggle:hover {
-        color: var(--accent);
-      }
-
-      .theme-toggle {
+        position: fixed;
+        right: clamp(16px, 3vw, 34px);
+        top: clamp(68px, 8vw, 110px);
+        z-index: 10;
         display: inline-grid;
-        width: 34px;
-        height: 34px;
         place-items: center;
-        color: var(--muted);
-        cursor: pointer;
-        background: var(--card);
+        width: 42px;
+        height: 42px;
         border: 1px solid var(--line);
         border-radius: 999px;
+        background: rgba(8, 10, 10, 0.68);
+        color: var(--text);
+        cursor: pointer;
+        backdrop-filter: blur(18px);
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease;
+      }
+
+      .theme-toggle:hover,
+      .theme-toggle:focus-visible {
+        transform: translateY(-2px);
+        border-color: var(--cyan);
+        outline: none;
       }
 
       .hero {
-        display: grid;
-        grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
-        align-items: center;
-        gap: clamp(34px, 7vw, 92px);
-        min-height: 82vh;
-        padding: clamp(42px, 8vw, 98px) 0 68px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 22px;
-        color: var(--accent);
-        font-size: 11px;
-        font-weight: 600;
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-      }
-
-      h1 {
-        max-width: 760px;
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: clamp(46px, 8vw, 104px);
-        font-weight: 500;
-        line-height: 0.88;
-        letter-spacing: -0.065em;
-      }
-
-      .italic {
-        font-style: italic;
-        color: color-mix(in srgb, var(--text) 86%, var(--accent));
+        min-height: 1200px;
+        padding: clamp(210px, 20vw, 360px) 0 110px;
       }
 
       .hero-copy {
-        max-width: 560px;
-        margin-top: 28px;
+        max-width: 1120px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .eyebrow-row,
+      .meta-label,
+      .section-kicker,
+      .chip,
+      .micro-label,
+      .nav-text,
+      .caption {
+        font-family:
+          "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow-row {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 72px;
+        color: var(--cyan);
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .file-chip {
+        display: inline-flex;
+        align-items: center;
+        min-height: 28px;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.045);
         color: var(--muted);
-        font-size: clamp(15px, 1.6vw, 18px);
-        line-height: 1.75;
+        padding: 2px 12px;
+        letter-spacing: 0.11em;
+      }
+
+      .eyebrow-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--cyan);
+        box-shadow: 0 0 24px rgba(0, 239, 255, 0.75);
+      }
+
+      .hero h1 {
+        margin: 0;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(4.45rem, 9.8vw, 10.8rem);
+        font-weight: 600;
+        letter-spacing: -0.075em;
+        line-height: 0.82;
+      }
+
+      .hero h1 span {
+        display: block;
+        color: #a9a8b0;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: -0.065em;
+      }
+
+      .hero-subtitle {
+        max-width: 760px;
+        margin: 72px auto 0;
+        color: var(--muted);
+        font-size: clamp(1.15rem, 1.72vw, 1.62rem);
+        font-weight: 300;
+        line-height: 1.55;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 34px;
+        align-items: center;
+        justify-content: center;
+        gap: 34px;
+        margin-top: 36px;
       }
 
       .button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 46px;
-        padding: 0 18px;
-        color: var(--bg);
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
+        min-height: 62px;
+        border-radius: 10px;
+        padding: 0 42px;
+        font-size: 1rem;
         font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        background: var(--accent);
-        border: 1px solid color-mix(in srgb, var(--accent) 78%, white);
-        border-radius: 999px;
-        box-shadow: 0 0 34px color-mix(in srgb, var(--accent) 25%, transparent);
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          background 180ms ease,
+          color 180ms ease;
+      }
+
+      .button.primary {
+        background: #fff;
+        color: #090909;
+        box-shadow: 0 20px 60px rgba(255, 255, 255, 0.08);
       }
 
       .button.secondary {
-        color: var(--text);
-        background: transparent;
+        border: 1px solid transparent;
+        color: #f4f4f2;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-3px);
+        outline: none;
+      }
+
+      .button.secondary:hover,
+      .button.secondary:focus-visible {
         border-color: var(--line-strong);
-        box-shadow: none;
+        background: rgba(255, 255, 255, 0.05);
       }
 
-      .browser-stack {
+      .hero-visual {
         position: relative;
-        min-height: 440px;
+        height: clamp(430px, 48vw, 660px);
+        margin-top: clamp(150px, 13vw, 220px);
       }
 
-      .browser-card {
+      .hero-glow {
+        position: absolute;
+        left: 50%;
+        top: 58%;
+        width: min(100%, 1100px);
+        height: 330px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(255, 255, 255, 0.13),
+          transparent 72%
+        );
+        filter: blur(26px);
+      }
+
+      .browser-card,
+      .dashboard-card {
         position: absolute;
         overflow: hidden;
-        background: #f7faf8;
-        border: 1px solid rgba(255, 255, 255, 0.22);
         border-radius: 10px;
+        background: #fff;
         box-shadow: var(--shadow);
       }
 
-      .browser-card.main {
-        inset: 52px 38px 28px 0;
-        z-index: 3;
-        transform: rotate(-2deg);
-      }
-
-      .browser-card.side-a {
-        top: 3px;
-        right: 0;
+      .browser-card {
+        left: 9%;
+        top: 5%;
         z-index: 2;
-        width: 42%;
-        height: 72%;
-        transform: rotate(5deg);
-        opacity: 0.86;
+        width: min(74vw, 1010px);
+        min-width: 730px;
+        aspect-ratio: 1.64 / 1;
+        transform: rotate(-2.1deg);
       }
 
-      .browser-card.side-b {
-        bottom: 0;
-        left: 8%;
+      .dashboard-card {
+        right: 5%;
+        top: 17%;
         z-index: 1;
-        width: 48%;
-        height: 54%;
-        transform: rotate(7deg);
-        opacity: 0.58;
+        width: min(39vw, 520px);
+        min-width: 360px;
+        aspect-ratio: 0.74 / 1;
+        filter: blur(2px);
+        opacity: 0.82;
+        transform: rotate(2.4deg);
       }
 
       .browser-top {
+        display: grid;
+        grid-template-columns: 170px 1fr auto;
+        align-items: center;
+        height: 76px;
+        padding: 0 48px;
+        border-bottom: 4px solid var(--orange);
+        color: #2b2b2b;
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      .gataama-mark {
+        display: grid;
+        gap: 4px;
+        justify-items: start;
+        color: var(--orange);
+        font-weight: 800;
+      }
+
+      .mark-head {
+        width: 24px;
+        height: 24px;
+        border: 2px solid #151515;
+        border-radius: 50% 50% 44% 44%;
+        background: linear-gradient(#fff 40%, #111 41% 46%, #fff 47%);
+      }
+
+      .browser-nav,
+      .dashboard-nav {
         display: flex;
         align-items: center;
-        gap: 6px;
-        height: 22px;
-        padding: 0 9px;
-        background: #ffffff;
-        border-bottom: 1px solid rgba(8, 16, 13, 0.08);
+        justify-content: center;
+        gap: 30px;
       }
 
-      .traffic {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        background: #ff5f57;
+      .browser-nav span:first-child {
+        color: var(--orange);
       }
 
-      .traffic:nth-child(2) {
-        background: #febc2e;
-      }
-
-      .traffic:nth-child(3) {
-        background: #28c840;
-      }
-
-      .browser-url {
-        width: 42%;
-        height: 6px;
-        margin-left: 7px;
-        background: #dfe9e4;
-        border-radius: 99px;
-      }
-
-      .site-shot {
-        min-height: 100%;
-        padding: 18px;
-        color: #101513;
-        background:
-          linear-gradient(120deg, rgba(0, 0, 0, 0.08), transparent 28%),
-          #fff;
-      }
-
-      .shot-hero {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 12px;
-        min-height: 120px;
-        padding: 15px;
-        background: #e7342c;
-        color: #fff;
-        border-radius: 7px;
-      }
-
-      .shot-title {
-        width: 80%;
-        height: 18px;
-        background: currentColor;
-        border-radius: 2px;
-        box-shadow: 0 28px 0 rgba(255, 255, 255, 0.62), 0 56px 0 rgba(255, 255, 255, 0.38);
-      }
-
-      .shot-image {
-        background:
-          radial-gradient(circle at 42% 34%, #ffd35f 0 12%, transparent 13%),
-          linear-gradient(135deg, #263925, #92a37a);
-        border: 5px solid rgba(255, 255, 255, 0.85);
+      .donate-btn {
         border-radius: 6px;
+        background: var(--orange);
+        color: #fff;
+        padding: 13px 24px;
+        font-size: 11px;
+        font-weight: 800;
       }
 
-      .shot-grid {
+      .site-photo {
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-        margin-top: 12px;
+        place-items: center;
+        min-height: 350px;
+        background:
+          linear-gradient(rgba(4, 7, 15, 0.48), rgba(4, 7, 15, 0.48)),
+          radial-gradient(circle at 44% 34%, #ffbb3f 0 3%, transparent 3.2%),
+          radial-gradient(circle at 54% 30%, #0dbe71 0 5%, transparent 5.2%),
+          radial-gradient(circle at 68% 24%, #ee2636 0 4%, transparent 4.2%),
+          linear-gradient(
+            130deg,
+            #15272e 0%,
+            #5b6f55 32%,
+            #7b2d33 55%,
+            #1f3c68 100%
+          );
+        color: #fff;
       }
 
-      .shot-grid span {
-        height: 48px;
-        background: linear-gradient(135deg, #f4f0dc, #2f5538);
-        border-radius: 5px;
+      .site-photo::before,
+      .site-photo::after {
+        position: absolute;
+        inset: 0;
+        content: "";
       }
 
-      .shot-grid span:nth-child(2) {
-        background: linear-gradient(135deg, #ffb545, #c92f24);
+      .site-photo::before {
+        background:
+          linear-gradient(
+            80deg,
+            transparent 0 34%,
+            rgba(255, 204, 55, 0.86) 34.5% 36%,
+            transparent 36.5%
+          ),
+          linear-gradient(
+            110deg,
+            transparent 0 57%,
+            rgba(37, 189, 113, 0.85) 57.5% 59%,
+            transparent 59.5%
+          ),
+          linear-gradient(
+            74deg,
+            transparent 0 68%,
+            rgba(232, 39, 48, 0.84) 68.5% 70%,
+            transparent 70.5%
+          );
+        filter: blur(0.4px);
+        opacity: 0.85;
       }
 
-      .shot-grid span:nth-child(3) {
-        background: linear-gradient(135deg, #f8f0d0, #1f2a25);
+      .site-photo-copy {
+        position: relative;
+        z-index: 1;
+        max-width: 770px;
+        padding: 50px;
+        text-align: center;
       }
 
-      .section {
-        padding: clamp(50px, 8vw, 92px) 0;
-        border-top: 1px solid var(--line);
+      .site-photo h2 {
+        margin: 0 0 14px;
+        font-size: clamp(2rem, 4vw, 4.1rem);
+        letter-spacing: -0.04em;
+        line-height: 0.95;
       }
 
-      .section-kicker {
+      .site-photo p {
+        margin: 0 auto;
+        max-width: 620px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 17px;
+        line-height: 1.5;
+      }
+
+      .carousel-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 40px;
+        display: flex;
+        gap: 7px;
+        transform: translateX(-50%);
+      }
+
+      .carousel-dots span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.52);
+      }
+
+      .carousel-dots span:first-child {
+        background: var(--orange);
+      }
+
+      .about-strip {
+        min-height: 250px;
+        padding: 64px 82px;
+        background: #fff;
+        color: #121212;
+      }
+
+      .about-strip small {
+        color: #b7b7b7;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .about-strip h3 {
+        margin: 14px 0 58px;
+        font-size: 27px;
+      }
+
+      .about-strip p {
+        margin: 0 auto;
+        max-width: 670px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .dashboard-card {
+        padding: 28px;
+        color: #1b1f1f;
+      }
+
+      .dashboard-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 58px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .dash-widget {
+        min-height: 90px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background: #fff;
+        padding: 16px;
+      }
+
+      .chart-bars {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        gap: 32px;
+        grid-column: 1 / -1;
+        min-height: 230px;
+      }
+
+      .chart-bars span {
+        width: 70px;
+        border-radius: 6px 6px 0 0;
+        background: linear-gradient(to top, #5ad46f 78%, #ff5b5b 78%);
+      }
+
+      .chart-bars span:nth-child(1) {
+        height: 178px;
+      }
+
+      .chart-bars span:nth-child(2) {
+        height: 204px;
+      }
+
+      .project-meta {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 34px;
+        margin-top: 62px;
+      }
+
+      .meta-card {
+        min-height: 104px;
+      }
+
+      .meta-label {
         display: flex;
         align-items: center;
         gap: 10px;
-        margin-bottom: 18px;
-        color: var(--accent);
-        font-size: 10px;
-        font-weight: 700;
+        color: var(--quiet);
+        font-size: 14px;
+        font-weight: 600;
       }
 
-      .section-kicker::before {
-        width: 34px;
-        height: 1px;
-        content: "";
-        background: var(--accent);
+      .meta-label svg {
+        width: 16px;
+        height: 16px;
+        color: var(--quiet);
       }
 
-      h2 {
-        max-width: 770px;
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: clamp(31px, 4.8vw, 58px);
-        font-weight: 500;
-        line-height: 1.02;
-        letter-spacing: -0.045em;
-      }
-
-      .section-lede {
-        max-width: 760px;
-        margin-top: 18px;
-        color: var(--muted);
-        font-size: clamp(15px, 1.5vw, 17px);
-        line-height: 1.8;
-      }
-
-      .grid {
-        display: grid;
-        gap: 16px;
-      }
-
-      .grid.two {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .grid.three {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .grid.four {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-
-      .mt-lg {
-        margin-top: clamp(28px, 5vw, 54px);
-      }
-
-      .card {
-        position: relative;
-        overflow: hidden;
-        padding: clamp(20px, 2.5vw, 30px);
-        background:
-          linear-gradient(145deg, color-mix(in srgb, var(--card) 88%, white 3%), var(--card)),
-          var(--card);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset;
-      }
-
-      .card::after {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        content: "";
-        background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.035), transparent 45%);
-      }
-
-      .metric-label {
-        margin-bottom: 10px;
-        color: var(--faint);
-        font-size: 10px;
-      }
-
-      .metric-value {
+      .meta-card strong {
+        display: block;
+        margin-top: 20px;
         color: var(--text);
-        font-size: clamp(18px, 2.1vw, 24px);
-        font-weight: 650;
+        font-size: 20px;
         line-height: 1.25;
       }
 
-      .card p,
-      .list li,
-      .persona-list li,
-      .timeline p {
+      .meta-card span {
+        display: block;
+        margin-top: 12px;
         color: var(--muted);
-        font-size: 14px;
+        font-size: 17px;
+      }
+
+      .section {
+        padding: clamp(58px, 8vw, 116px) 0;
+      }
+
+      .section-tight {
+        padding-top: 34px;
+      }
+
+      .section-kicker {
+        margin: 0 0 18px;
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .section-title {
+        max-width: 820px;
+        margin: 0;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(2.35rem, 5vw, 5.25rem);
+        font-weight: 600;
+        letter-spacing: -0.055em;
+        line-height: 0.98;
+      }
+
+      .section-title em {
+        color: #a9a8b0;
+        font-style: italic;
+        font-weight: 500;
+      }
+
+      .lead {
+        max-width: 760px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.02rem, 1.45vw, 1.28rem);
         line-height: 1.75;
       }
 
-      .card h3 {
-        margin-bottom: 12px;
-        color: var(--text);
-        font-size: 17px;
-        font-weight: 650;
-        letter-spacing: -0.02em;
-      }
-
-      .list,
-      .persona-list {
+      .copy-columns {
         display: grid;
-        gap: 12px;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: clamp(30px, 6vw, 86px);
+        align-items: start;
+      }
+
+      .copy-columns.reverse {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+
+      .body-copy {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.85;
+      }
+
+      .body-copy p {
+        margin: 0 0 18px;
+      }
+
+      .body-copy strong {
+        color: var(--text-soft);
+      }
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+
+      .card-grid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .insight-card,
+      .dark-card,
+      .metric-tile,
+      .persona-card,
+      .system-card,
+      .flow-card,
+      .outcome-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background:
+          linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0.015)
+          ),
+          var(--panel);
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+      }
+
+      .insight-card,
+      .dark-card,
+      .persona-card,
+      .system-card,
+      .flow-card,
+      .outcome-card {
+        padding: 22px;
+      }
+
+      .card-number {
+        color: var(--cyan);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .insight-card h3,
+      .dark-card h3,
+      .persona-card h3,
+      .system-card h3,
+      .flow-card h3,
+      .outcome-card h3 {
+        margin: 18px 0 10px;
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      .insight-card p,
+      .dark-card p,
+      .persona-card p,
+      .system-card p,
+      .flow-card p,
+      .outcome-card p {
         margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .list li,
-      .persona-list li {
-        position: relative;
-        padding-left: 20px;
-      }
-
-      .list li::before,
-      .persona-list li::before {
-        position: absolute;
-        top: 0.72em;
-        left: 0;
-        width: 7px;
-        height: 7px;
-        content: "";
-        background: var(--accent);
-        border-radius: 999px;
-        box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 45%, transparent);
-      }
-
-      .divider-accent {
-        height: 10px;
-        margin: 32px 0 0;
-        background: linear-gradient(90deg, rgba(255, 72, 63, 0.08), rgba(255, 72, 63, 0.34), rgba(255, 72, 63, 0.05));
-        border: 1px solid rgba(255, 72, 63, 0.13);
-        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.93rem;
+        line-height: 1.65;
       }
 
       .timeline {
-        position: relative;
         display: grid;
-        gap: 16px;
+        gap: 18px;
+        margin-top: 38px;
       }
 
       .timeline-item {
         display: grid;
-        grid-template-columns: 94px 1fr;
+        grid-template-columns: 150px 1fr;
         gap: 22px;
-        align-items: start;
+        border-top: 1px solid var(--line);
+        padding-top: 22px;
       }
 
-      .timeline-marker {
-        padding-top: 4px;
-        color: var(--accent);
-        font-size: 10px;
-        font-weight: 700;
+      .timeline-item strong {
+        color: var(--text);
       }
 
-      .wireframe,
-      .dashboard,
-      .system-board,
-      .responsive-board,
-      .checkout-flow {
-        background: #050908;
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        box-shadow: var(--shadow);
+      .timeline-item p {
+        margin: 8px 0 0;
+        color: var(--muted);
+        line-height: 1.7;
       }
 
-      html.light .wireframe,
-      html.light .dashboard,
-      html.light .system-board,
-      html.light .responsive-board,
-      html.light .checkout-flow {
-        background: #f8fbf8;
-      }
-
-      .wireframe {
+      .metrics-board {
         display: grid;
-        gap: 12px;
-        padding: 18px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 36px;
+      }
+
+      .metric-tile {
+        padding: 24px;
+      }
+
+      .metric-tile strong {
+        display: block;
+        color: var(--text);
+        font-size: clamp(1.9rem, 4vw, 3.25rem);
+        letter-spacing: -0.05em;
+      }
+
+      .metric-tile span {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .problem-panel {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 48, 48, 0.23);
+        border-radius: var(--radius-lg);
+        margin-top: 34px;
+        background:
+          linear-gradient(135deg, rgba(255, 48, 48, 0.1), transparent 50%),
+          var(--panel);
+        padding: clamp(24px, 4vw, 44px);
+      }
+
+      .problem-panel::before {
+        position: absolute;
+        inset: auto 0 0;
+        height: 9px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 48, 48, 0.85),
+          transparent
+        );
+        content: "";
+      }
+
+      .problem-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 26px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .problem-list li,
+      .check-list li {
+        position: relative;
+        padding-left: 24px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .problem-list li::before,
+      .check-list li::before {
+        position: absolute;
+        left: 0;
+        top: 0.72em;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--cyan);
+        content: "";
+      }
+
+      .problem-list li::before {
+        background: var(--red);
+      }
+
+      .check-list {
+        display: grid;
+        gap: 14px;
+        margin: 24px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .research-board {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 38px;
+      }
+
+      .research-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--panel);
+        padding: 28px;
+      }
+
+      .research-card.wide {
+        grid-column: 1 / -1;
+      }
+
+      .quote-box {
+        border-left: 3px solid var(--cyan);
+        margin-top: 22px;
+        padding: 8px 0 8px 22px;
+        color: var(--text-soft);
+        font-size: 1.1rem;
+        line-height: 1.7;
       }
 
       .wireframe-row,
-      .wireframe-card,
-      .bar,
-      .tiny-card,
-      .input-line {
-        border-radius: 8px;
-        background: color-mix(in srgb, var(--card-2) 82%, var(--accent) 7%);
-        border: 1px solid var(--line);
+      .screen-row,
+      .admin-grid,
+      .final-row {
+        display: grid;
+        gap: 20px;
+        margin-top: 38px;
       }
 
       .wireframe-row {
-        height: 34px;
+        grid-template-columns: 1.1fr 0.9fr;
       }
 
-      .wireframe-hero {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 12px;
+      .screen-row,
+      .final-row {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .wireframe-card {
-        min-height: 138px;
-      }
-
-      .wireframe-card.red {
-        background: linear-gradient(135deg, rgba(255, 72, 63, 0.9), rgba(255, 116, 80, 0.52));
-      }
-
-      .wireframe-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-
-      .wireframe-grid .wireframe-card {
-        min-height: 86px;
-      }
-
-      .image-tile {
-        min-height: 210px;
-        padding: 10px;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-      }
-
-      .image-tile .art {
-        min-height: 150px;
-        border-radius: 10px;
-        background:
-          radial-gradient(circle at 27% 32%, #ffe157 0 8%, transparent 9%),
-          radial-gradient(circle at 72% 45%, #f04933 0 11%, transparent 12%),
-          linear-gradient(135deg, #162a1b, #627844 42%, #f2d17b 43%, #e64b2e 68%, #1a241f 69%);
-      }
-
-      .caption {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 12px;
-        color: var(--faint);
-        font-size: 9px;
-      }
-
-      .dashboard {
-        padding: 18px;
-      }
-
-      .dash-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 18px;
-      }
-
-      .dash-title {
-        width: 36%;
-        height: 12px;
-        background: var(--accent);
-        border-radius: 999px;
-        box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 34%, transparent);
-      }
-
-      .dash-controls {
-        display: flex;
-        gap: 8px;
-      }
-
-      .dash-controls span {
-        width: 32px;
-        height: 12px;
-        background: var(--card-2);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-      }
-
-      .dash-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
-      }
-
-      .dash-panel {
-        min-height: 118px;
-        padding: 12px;
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-      }
-
-      .bar {
-        height: 8px;
-        margin-bottom: 10px;
-        background: var(--card-2);
-      }
-
-      .bar.wide {
-        width: 88%;
-      }
-
-      .bar.mid {
-        width: 62%;
-      }
-
-      .bar.short {
-        width: 36%;
-      }
-
-      .bar.accent {
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      }
-
-      .palette {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 10px;
-      }
-
-      .swatch {
-        min-height: 96px;
-        border: 1px solid var(--line);
-        border-radius: 12px;
-      }
-
-      .swatch:nth-child(1) {
-        background: #050706;
-      }
-
-      .swatch:nth-child(2) {
-        background: #11f5e8;
-      }
-
-      .swatch:nth-child(3) {
-        background: #e94132;
-      }
-
-      .swatch:nth-child(4) {
-        background: #ffb84c;
-      }
-
-      .swatch:nth-child(5) {
-        background: #f5f0dc;
-      }
-
-      .type-specimen {
-        display: grid;
-        gap: 14px;
-      }
-
-      .type-serif {
-        font-family: "Playfair Display", serif;
-        font-size: clamp(34px, 5vw, 62px);
-        line-height: 0.95;
-        letter-spacing: -0.055em;
-      }
-
-      .type-sans {
-        font-size: clamp(18px, 2.5vw, 31px);
-        font-weight: 650;
-        letter-spacing: -0.04em;
-      }
-
-      .type-mono {
-        color: var(--accent);
-        font-family: "JetBrains Mono", monospace;
-        font-size: 11px;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .system-board,
-      .responsive-board,
-      .checkout-flow {
-        padding: clamp(18px, 3vw, 30px);
-      }
-
-      .components-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 14px;
-      }
-
-      .tiny-card {
-        min-height: 82px;
-        padding: 12px;
-      }
-
-      .input-line {
-        width: 100%;
-        height: 36px;
-        margin-top: 10px;
-      }
-
-      .button-row {
-        display: flex;
-        gap: 10px;
-        margin-top: 12px;
-      }
-
-      .mini-button {
-        width: 86px;
-        height: 32px;
-        background: var(--accent);
-        border-radius: 999px;
-      }
-
-      .mini-button.dark {
-        background: transparent;
-        border: 1px solid var(--line-strong);
-      }
-
-      .phone-tablet {
-        display: grid;
-        grid-template-columns: 0.75fr 1.1fr 1.45fr;
-        gap: 18px;
-        align-items: end;
-      }
-
-      .device {
+      .wireframe,
+      .screen-shot,
+      .admin-screen,
+      .final-shot,
+      .device-showcase,
+      .style-board {
         overflow: hidden;
-        padding: 10px;
-        background: #f7fbf8;
-        border: 1px solid var(--line-strong);
-        border-radius: 18px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        background: var(--panel);
         box-shadow: var(--shadow);
       }
 
-      .device.phone {
-        min-height: 310px;
-        border-radius: 26px;
+      .wireframe {
+        padding: 22px;
       }
 
-      .device.tablet {
-        min-height: 260px;
-      }
-
-      .device.desktop {
-        min-height: 225px;
-      }
-
-      .device-screen {
-        height: 100%;
-        min-height: inherit;
-        padding: 10px;
-        background: #fff;
-        border-radius: 12px;
-      }
-
-      .device-hero {
-        min-height: 74px;
-        background: #e94132;
-        border-radius: 8px;
-      }
-
-      .device-lines span {
-        display: block;
-        height: 7px;
-        margin-top: 8px;
-        background: #dce7e1;
-        border-radius: 99px;
-      }
-
-      .device-lines span:nth-child(1) {
-        width: 74%;
-      }
-
-      .device-lines span:nth-child(2) {
-        width: 56%;
-      }
-
-      .device-lines span:nth-child(3) {
-        width: 84%;
-      }
-
-      .final-screen {
-        display: grid;
-        grid-template-columns: 1fr 0.86fr;
-        gap: 22px;
-        align-items: center;
-        min-height: 360px;
-        padding: clamp(18px, 3vw, 30px);
-        color: #111815;
-        background: #fffdf8;
-        border-radius: 18px;
-      }
-
-      .final-red {
-        min-height: 220px;
+      .wireframe-ui {
+        border-radius: 14px;
+        background: #111616;
         padding: 18px;
-        color: #fff;
-        background: linear-gradient(135deg, #ed3f31, #bc241d);
-        border-radius: 14px;
       }
 
-      .final-red h3 {
-        max-width: 360px;
-        font-family: "Playfair Display", serif;
-        font-size: clamp(34px, 5vw, 62px);
-        line-height: 0.9;
-        letter-spacing: -0.055em;
+      .ui-topline,
+      .ui-row,
+      .ui-input,
+      .ui-block {
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.08);
       }
 
-      .final-products {
+      .ui-topline {
+        width: 48%;
+        height: 10px;
+        margin-bottom: 18px;
+      }
+
+      .ui-hero {
+        min-height: 130px;
+        border-radius: 12px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 239, 255, 0.22),
+          rgba(255, 106, 26, 0.2)
+        );
+        margin-bottom: 18px;
+      }
+
+      .ui-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .ui-block {
+        min-height: 82px;
+      }
+
+      .style-board {
+        padding: 30px;
+      }
+
+      .color-row {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 10px;
+        margin-top: 24px;
       }
 
-      .product-card {
-        min-height: 126px;
-        padding: 8px;
-        background: #f4f0df;
-        border-radius: 10px;
-      }
-
-      .product-img {
-        height: 72px;
-        background: linear-gradient(135deg, #203928, #f5d887 45%, #e34a34 46%, #2a312b);
-        border-radius: 8px;
-      }
-
-      .checkout-flow {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-      }
-
-      .checkout-card {
-        padding: 16px;
-        background: var(--card);
-        border: 1px solid var(--line);
+      .swatch {
+        min-height: 78px;
         border-radius: 14px;
-      }
-
-      .quote {
-        padding: clamp(26px, 5vw, 52px);
-        text-align: center;
-        background: linear-gradient(135deg, rgba(17, 245, 232, 0.1), rgba(119, 255, 128, 0.04));
         border: 1px solid var(--line);
-        border-radius: 20px;
       }
 
-      .quote p {
-        max-width: 790px;
-        margin: 0 auto;
-        color: var(--text);
+      .swatch:nth-child(1) {
+        background: #000;
+      }
+      .swatch:nth-child(2) {
+        background: #fff;
+      }
+      .swatch:nth-child(3) {
+        background: var(--orange);
+      }
+      .swatch:nth-child(4) {
+        background: var(--cyan);
+      }
+      .swatch:nth-child(5) {
+        background: #56d36b;
+      }
+
+      .type-sample {
+        margin-top: 26px;
         font-family: "Playfair Display", serif;
-        font-size: clamp(25px, 4vw, 48px);
-        font-style: italic;
-        line-height: 1.12;
-        letter-spacing: -0.035em;
+        font-size: clamp(2.2rem, 4.5vw, 4.8rem);
+        letter-spacing: -0.07em;
+        line-height: 0.9;
       }
 
-      .footer {
+      .type-sample em {
+        color: #a9a8b0;
+      }
+
+      .screen-shot,
+      .final-shot {
+        min-height: 360px;
+        background: #f7f7f5;
+        color: #111;
+      }
+
+      .screen-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 18px;
-        padding-top: 32px;
-        color: var(--faint);
-        border-top: 1px solid var(--line);
+        height: 54px;
+        border-bottom: 3px solid var(--orange);
+        padding: 0 28px;
+        font-size: 11px;
+        font-weight: 800;
       }
 
-      .footer a {
-        color: var(--accent);
+      .screen-hero {
+        min-height: 188px;
+        display: grid;
+        place-items: center;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+          linear-gradient(135deg, #364d33, #d38d2a 30%, #0c8d78 58%, #52347d);
+        color: #fff;
+        text-align: center;
+        padding: 30px;
+      }
+
+      .screen-hero h3 {
+        margin: 0;
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+      }
+
+      .screen-content {
+        padding: 30px;
+      }
+
+      .screen-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .screen-mini-card {
+        min-height: 92px;
+        border: 1px solid #e7e7e7;
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .screen-shot.news .screen-hero {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.22)),
+          linear-gradient(
+            130deg,
+            #d34924,
+            #ffe7c8 42%,
+            #14935d 43% 60%,
+            #fff 60%
+          );
+      }
+
+      .admin-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .admin-screen {
+        min-height: 260px;
+        padding: 18px;
+        background: #090d0e;
+      }
+
+      .admin-screen.large {
+        grid-column: span 2;
+      }
+
+      .admin-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+      }
+
+      .admin-pill,
+      .admin-line,
+      .admin-stat,
+      .admin-table-row {
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.075);
+      }
+
+      .admin-pill {
+        width: 84px;
+        height: 12px;
+      }
+
+      .admin-gridlet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .admin-stat {
+        min-height: 74px;
+        padding: 12px;
+      }
+
+      .admin-line {
+        height: 7px;
+        margin-top: 9px;
+      }
+
+      .admin-line.cyan {
+        background: var(--cyan);
+      }
+      .admin-line.red {
+        background: var(--red);
+      }
+      .admin-line.green {
+        background: var(--green);
+      }
+      .admin-line.purple {
+        background: var(--purple);
+      }
+      .admin-table {
+        display: grid;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .admin-table-row {
+        min-height: 32px;
+      }
+
+      .device-showcase {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr 1.4fr;
+        align-items: end;
+        gap: 22px;
+        padding: clamp(22px, 4vw, 42px);
+      }
+
+      .device {
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 26px;
+        background: #080b0c;
+        padding: 10px;
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.44);
+      }
+
+      .device.phone {
+        min-height: 390px;
+      }
+      .device.tablet {
+        min-height: 310px;
+        border-radius: 22px;
+      }
+      .device.desktop {
+        min-height: 250px;
+        border-radius: 18px;
+      }
+
+      .device-inner {
+        height: 100%;
+        min-height: inherit;
+        border-radius: inherit;
+        background: #f8f8f6;
+        overflow: hidden;
+      }
+
+      .device-hero {
+        height: 42%;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+          linear-gradient(135deg, #7a5231, #238f6f, #edc530);
+      }
+
+      .device-lines {
+        display: grid;
+        gap: 10px;
+        padding: 18px;
+      }
+
+      .device-lines span {
+        height: 8px;
+        border-radius: 999px;
+        background: #d9d9d9;
+      }
+
+      .device-lines span:nth-child(2) {
+        width: 72%;
+      }
+      .device-lines span:nth-child(3) {
+        width: 46%;
+        background: var(--orange);
+      }
+
+      .final-shot {
+        border-radius: 22px;
+      }
+
+      .final-shot.flags {
+        display: grid;
+        place-items: center;
+        padding: 40px;
+      }
+
+      .flag-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 14px;
+        width: min(100%, 420px);
+      }
+
+      .flag {
+        aspect-ratio: 1.55;
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          #149f64 0 33%,
+          #fff 33% 66%,
+          #149f64 66%
+        );
+        box-shadow: 0 7px 18px rgba(0, 0, 0, 0.16);
+      }
+
+      .flag:nth-child(2n) {
+        background: linear-gradient(#e62424 0 33%, #fff 33% 66%, #111 66%);
+      }
+      .flag:nth-child(3n) {
+        background: linear-gradient(
+          90deg,
+          #111 0 33%,
+          #f6d21f 33% 66%,
+          #e3262e 66%
+        );
+      }
+      .flag:nth-child(4n) {
+        background: linear-gradient(#fff 0 33%, #1b69b6 33% 66%, #e3262e 66%);
+      }
+
+      .final-shot.admin-final {
+        background: #080c0d;
+        color: #fff;
+        padding: 24px;
+      }
+
+      .admin-final-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin-top: 24px;
+      }
+
+      .admin-final-card {
+        min-height: 118px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: #0e1516;
+        padding: 16px;
+      }
+
+      .progress {
+        height: 9px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        margin-top: 18px;
+      }
+
+      .progress span {
+        display: block;
+        width: 68%;
+        height: 100%;
+        background: var(--cyan);
+      }
+
+      .handoff-panel {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-xl);
+        background:
+          radial-gradient(
+            circle at 12% 0%,
+            rgba(0, 239, 255, 0.12),
+            transparent 28rem
+          ),
+          var(--panel);
+        padding: clamp(28px, 5vw, 58px);
+      }
+
+      .handoff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+
+      .quote-section {
+        padding-bottom: 130px;
+      }
+
+      .closing-quote {
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .closing-quote blockquote {
+        margin: 0;
+        font-family: "Playfair Display", serif;
+        color: var(--text);
+        font-size: clamp(2rem, 4.4vw, 5.1rem);
+        letter-spacing: -0.055em;
+        line-height: 1.02;
+      }
+
+      .closing-quote p {
+        margin: 30px auto 0;
+        max-width: 660px;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--line);
+        padding: 34px 0 54px;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .back-link {
+        color: var(--cyan);
+        font-weight: 800;
       }
 
       .reveal {
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 600ms ease, transform 600ms ease;
+        transform: translateY(28px);
+        transition:
+          opacity 700ms ease,
+          transform 700ms ease;
       }
 
       .reveal.visible {
@@ -1016,718 +1422,948 @@
         *::before,
         *::after {
           scroll-behavior: auto !important;
-          transition-duration: 1ms !important;
-          animation-duration: 1ms !important;
+          transition: none !important;
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
         }
       }
 
-      @media (max-width: 900px) {
-        .site-nav .nav-link {
-          display: none;
+      @media (max-width: 1060px) {
+        .hero {
+          min-height: auto;
+          padding-top: 170px;
         }
 
-        .hero,
-        .final-screen,
-        .checkout-flow,
-        .components-grid {
-          grid-template-columns: 1fr;
+        .browser-card {
+          left: 2%;
+          min-width: 620px;
         }
 
-        .browser-stack {
-          min-height: 390px;
+        .dashboard-card {
+          right: -8%;
         }
 
-        .grid.three,
-        .grid.four {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .project-meta,
+        .metrics-board,
+        .admin-grid,
+        .handoff-grid {
+          grid-template-columns: repeat(2, 1fr);
         }
 
-        .phone-tablet {
-          grid-template-columns: 0.8fr 1fr;
-        }
-
-        .device.desktop {
-          grid-column: 1 / -1;
+        .admin-screen.large {
+          grid-column: span 1;
         }
       }
 
-      @media (max-width: 620px) {
-        .page-shell {
-          padding-bottom: 58px;
+      @media (max-width: 820px) {
+        .top-strip {
+          height: 46px;
+        }
+
+        .theme-toggle {
+          top: 60px;
         }
 
         .hero {
-          min-height: auto;
-          padding-top: 44px;
+          padding-top: 100px;
         }
 
-        .browser-stack {
-          min-height: 300px;
+        .eyebrow-row {
+          margin-bottom: 44px;
+          font-size: 12px;
         }
 
-        .browser-card.main {
-          inset: 38px 16px 12px 0;
+        .hero-subtitle {
+          margin-top: 42px;
         }
 
-        .browser-card.side-a {
-          width: 48%;
-          height: 62%;
+        .hero-actions {
+          gap: 12px;
         }
 
-        .grid.two,
-        .grid.three,
-        .grid.four,
-        .wireframe-hero,
-        .wireframe-grid,
-        .dash-grid,
-        .palette,
-        .phone-tablet,
-        .final-products {
+        .button {
+          width: 100%;
+          max-width: 310px;
+          min-height: 54px;
+        }
+
+        .hero-visual {
+          height: auto;
+          margin-top: 78px;
+        }
+
+        .hero-glow,
+        .dashboard-card {
+          display: none;
+        }
+
+        .browser-card {
+          position: relative;
+          left: auto;
+          top: auto;
+          width: 100%;
+          min-width: 0;
+          transform: rotate(-1deg);
+        }
+
+        .browser-top {
+          grid-template-columns: 1fr auto;
+          height: 54px;
+          padding: 0 18px;
+        }
+
+        .browser-nav {
+          display: none;
+        }
+
+        .donate-btn {
+          padding: 9px 12px;
+        }
+
+        .site-photo {
+          min-height: 250px;
+        }
+
+        .site-photo-copy {
+          padding: 28px;
+        }
+
+        .about-strip {
+          min-height: 190px;
+          padding: 32px;
+        }
+
+        .project-meta,
+        .copy-columns,
+        .copy-columns.reverse,
+        .card-grid,
+        .card-grid.two,
+        .research-board,
+        .wireframe-row,
+        .screen-row,
+        .final-row,
+        .device-showcase,
+        .handoff-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .problem-list,
+        .metrics-board,
+        .admin-grid {
           grid-template-columns: 1fr;
         }
 
         .timeline-item {
           grid-template-columns: 1fr;
-          gap: 8px;
         }
 
-        .swatch {
-          min-height: 64px;
+        .screen-cards,
+        .color-row {
+          grid-template-columns: repeat(2, 1fr);
         }
 
-        .site-header {
-          position: relative;
-        }
-      }
-    </style>
-  </head>
-
-      .wire-line,
-      .wire-block,
-      .bar,
-      .input,
-      .tiny-block {
-        background: var(--surface-2);
-        border: 1px solid var(--hairline);
-        border-radius: 3px;
-      }
-
-      .wire-line {
-        height: 10px;
-      }
-
-      .wire-hero {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 5px;
-      }
-
-      .wire-block {
-        min-height: 43px;
-      }
-
-      .wire-block.red {
-        background: linear-gradient(135deg, rgba(255, 61, 54, 0.9), rgba(255, 61, 54, 0.32));
-      }
-
-      .wire-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4px;
-      }
-
-      .wire-grid .wire-block {
-        min-height: 24px;
-      }
-
-      .shot-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 7px;
-        margin-top: 10px;
-      }
-
-      .shot {
-        padding: 5px;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 5px;
-      }
-
-      .shot-photo {
-        height: 52px;
-        border-radius: 3px;
-      }
-
-      .caption {
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-        margin-top: 5px;
-        color: var(--soft);
-        font-size: 4px;
-      }
-
-      .analysis-board {
-        padding: 8px;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 5px;
-      }
-
-      .browser-mini {
-        overflow: hidden;
-        background: #101816;
-        border: 1px solid var(--hairline);
-        border-radius: 4px;
-      }
-
-      .browser-mini .browser-top {
-        height: 9px;
-        background: #0b1110;
-      }
-
-      .mini-screen {
-        padding: 7px;
-      }
-
-      .bar {
-        height: 4px;
-        margin-bottom: 4px;
-      }
-
-      .bar.aqua {
-        background: var(--aqua);
-        box-shadow: 0 0 8px rgba(15, 242, 230, 0.3);
-      }
-
-      .bar.red {
-        background: var(--red);
-      }
-
-      .bar.amber {
-        background: var(--amber);
-      }
-
-      .bar.w90 {
-        width: 90%;
-      }
-
-      .bar.w70 {
-        width: 70%;
-      }
-
-      .bar.w45 {
-        width: 45%;
-      }
-
-      .components {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 6px;
-      }
-
-      .component-card {
-        padding: 7px;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 4px;
-      }
-
-      .palette {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 4px;
-      }
-
-      .swatch {
-        height: 34px;
-        border: 1px solid var(--hairline);
-        border-radius: 3px;
-      }
-
-      .swatch:nth-child(1) {
-        background: #020403;
-      }
-
-      .swatch:nth-child(2) {
-        background: #0ff2e6;
-      }
-
-      .swatch:nth-child(3) {
-        background: #ff3d36;
-      }
-
-      .swatch:nth-child(4) {
-        background: #f2af4a;
-      }
-
-      .swatch:nth-child(5) {
-        background: #f5efe1;
-      }
-
-      .type-sample {
-        display: grid;
-        gap: 5px;
-      }
-
-      .type-serif {
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 18px;
-        font-style: italic;
-        line-height: 0.92;
-        letter-spacing: -0.06em;
-      }
-
-      .type-sans {
-        font-size: 8px;
-        font-weight: 650;
-        line-height: 1.15;
-        letter-spacing: -0.035em;
-      }
-
-      .matrix {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-      }
-
-      .matrix .card {
-        min-height: 56px;
-      }
-
-      .final-stack {
-        position: relative;
-        height: 154px;
-        margin-top: 14px;
-      }
-
-      .final-screen {
-        position: absolute;
-        overflow: hidden;
-        background: #fffdf8;
-        border: 1px solid rgba(255, 255, 255, 0.42);
-        border-radius: 4px;
-        box-shadow: var(--shadow);
-      }
-
-      .final-screen.one {
-        top: 6px;
-        left: 14px;
-        z-index: 4;
-        width: 178px;
-        height: 96px;
-        transform: rotate(-4deg);
-      }
-
-      .final-screen.two {
-        right: 17px;
-        bottom: 14px;
-        z-index: 3;
-        width: 152px;
-        height: 86px;
-        transform: rotate(2.8deg);
-      }
-
-      .final-screen.three {
-        top: 33px;
-        right: 0;
-        z-index: 2;
-        width: 87px;
-        height: 93px;
-        transform: rotate(7deg);
-      }
-
-      .final-inner {
-        padding: 7px;
-      }
-
-      .final-hero-red {
-        display: grid;
-        grid-template-columns: 1fr 0.7fr;
-        gap: 5px;
-        min-height: 38px;
-        padding: 5px;
-        background: #e64032;
-        border-radius: 3px;
-      }
-
-      .final-products {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4px;
-        margin-top: 5px;
-      }
-
-      .final-product {
-        height: 22px;
-        background: #f2ead9;
-        border-radius: 2px;
-      }
-
-      .checkout {
-        display: grid;
-        gap: 7px;
-      }
-
-      .checkout-row {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 7px;
-      }
-
-      .form-card {
-        padding: 7px;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 5px;
-      }
-
-      .input {
-        height: 10px;
-        margin-bottom: 5px;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-        margin-top: 9px;
-      }
-
-      .stat {
-        padding: 7px;
-        text-align: center;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 4px;
-      }
-
-      .stat-value {
-        color: var(--text);
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 1;
-      }
-
-      .stat-label {
-        margin-top: 4px;
-        color: var(--soft);
-        font-size: 4px;
-      }
-
-      .quote-card {
-        padding: 13px 10px;
-        text-align: center;
-        background: var(--surface);
-        border: 1px solid var(--hairline);
-        border-radius: 6px;
-      }
-
-      .quote-card p {
-        color: var(--text);
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 12px;
-        font-style: italic;
-        line-height: 1.12;
-        letter-spacing: -0.04em;
-      }
-
-      footer {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 26px;
-        padding-top: 10px;
-        color: var(--soft);
-        font-family: "JetBrains Mono", monospace;
-        font-size: 4.5px;
-        letter-spacing: 0.13em;
-        text-transform: uppercase;
-        border-top: 1px solid var(--hairline);
-      }
-
-      footer a {
-        color: var(--aqua);
-      }
-
-      @media (min-width: 560px) {
-        .page {
-          width: min(100%, 390px);
-          padding-right: 34px;
-          padding-left: 34px;
+        .footer-inner {
+          align-items: flex-start;
+          flex-direction: column;
         }
       }
 
-      @media (max-width: 330px) {
-        .page {
-          padding-right: 14px;
-          padding-left: 14px;
+      @media (max-width: 520px) {
+        .container,
+        .container-narrow {
+          width: min(100% - 28px, var(--wrap));
         }
 
-        .meta-row,
-        .grid.three,
-        .matrix,
-        .stats {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+        .hero h1 {
+          font-size: clamp(3.2rem, 18vw, 5rem);
         }
-      }
 
-      @media (max-width: 285px) {
-        .grid.two,
-        .shot-grid,
-        .components,
-        .checkout-row,
-        .meta-row,
-        .grid.three,
-        .matrix,
-        .stats {
+        .eyebrow-row {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        .project-meta {
+          gap: 18px;
+        }
+
+        .meta-card {
+          min-height: 0;
+          border-top: 1px solid var(--line);
+          padding-top: 18px;
+        }
+
+        .screen-cards,
+        .color-row {
           grid-template-columns: 1fr;
-        }
-
-        .hero-mockup,
-        .final-stack {
-          transform: scale(0.9);
-          transform-origin: top center;
         }
       }
     </style>
   </head>
   <body>
-    <header class="site-header" aria-label="Gataama case study navigation">
-      <a class="brand" href="../index.html" aria-label="Back to Udoh Blessing portfolio">
-        <span class="brand-dot"></span>
-        Product Designs
-      </a>
-      <nav class="site-nav" aria-label="Page sections">
-        <a class="nav-link" href="#overview">[01] Overview</a>
-        <a class="nav-link" href="#research">[02] Research</a>
-        <a class="nav-link" href="#design">[03] Design</a>
-        <a class="nav-link" href="#outcome">[04] Outcome</a>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark mode">◐</button>
-      </nav>
-    </header>
+    <a href="#case-study" class="skip-link">Skip to case study</a>
+    <div class="top-strip" aria-hidden="true"></div>
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      type="button"
+      aria-label="Toggle light and dark mode"
+    >
+      <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+        <path
+          fill="currentColor"
+          d="M12 2.25a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75Zm0 16.5a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75ZM21.75 12a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM5.25 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75Zm13.28-6.53a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 1 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0ZM7.59 16.41a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 0 1-1.06-1.06l1.06-1.06a.75.75 0 0 1 1.06 0Zm10.94 2.12a.75.75 0 0 1-1.06 0l-1.06-1.06a.75.75 0 1 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06ZM7.59 7.59a.75.75 0 0 1-1.06 0L5.47 6.53a.75.75 0 1 1 1.06-1.06l1.06 1.06a.75.75 0 0 1 0 1.06ZM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10Z"
+        />
+      </svg>
+    </button>
 
-    <main class="page-shell">
-      <section class="hero reveal" id="top" aria-labelledby="case-title">
-        <div>
-          <p class="eyebrow"><span class="status-dot"></span> Case Study · Website Redesign</p>
-          <h1 id="case-title">
-            Gataama Website Redesign: <span class="italic">a digital Afrocentric experience</span>
-          </h1>
-          <p class="hero-copy">
-            A responsive product design case study for an African-inspired commerce experience — balancing storytelling,
-            cultural identity, conversion clarity, and a premium interface system across web and mobile.
-          </p>
-          <div class="hero-actions" aria-label="Case study shortcuts">
-            <a class="button" href="#design">Explore UI System</a>
-            <a class="button secondary" href="#research">View UX Process</a>
+    <main class="case-page" id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="container">
+          <div class="hero-copy reveal visible">
+            <div class="eyebrow-row" aria-label="Case study file identifier">
+              <span class="file-chip">FILE_003</span>
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              <span>Case Study</span>
+            </div>
+            <h1 id="page-title">
+              Gataama Website
+              <span>Redesign &amp; Admin</span>
+              <span>Dashboard</span>
+            </h1>
+            <p class="hero-subtitle">
+              Transforming an outdated and fragmented platform into a seamless,
+              scalable, and user-centered digital experience.
+            </p>
+            <div class="hero-actions" aria-label="Project actions">
+              <a
+                class="button primary"
+                href="https://gataama.org"
+                target="_blank"
+                rel="noreferrer"
+                >View Live Site</a
+              >
+              <a class="button secondary" href="#case-study"
+                >Explore Case Study</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="hero-visual reveal visible"
+            aria-label="Gataama website and admin dashboard mockups"
+          >
+            <div class="hero-glow" aria-hidden="true"></div>
+            <article
+              class="dashboard-card"
+              aria-label="Admin dashboard preview"
+            >
+              <div class="dashboard-top">
+                <strong>Dashboard</strong>
+                <span class="file-chip">LIVE</span>
+              </div>
+              <div class="dashboard-grid">
+                <div class="dash-widget"></div>
+                <div class="dash-widget"></div>
+                <div class="chart-bars" aria-hidden="true">
+                  <span></span><span></span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="browser-card"
+              aria-label="Gataama redesigned homepage preview"
+            >
+              <div class="browser-top">
+                <div class="gataama-mark">
+                  <span class="mark-head" aria-hidden="true"></span
+                  ><span>Gataama</span>
+                </div>
+                <nav class="browser-nav" aria-label="Preview navigation">
+                  <span>Home</span><span>What we do</span><span>Country</span
+                  ><span>Blog</span><span>Petition</span><span>Conference</span>
+                </nav>
+                <span class="donate-btn">Make a Donation</span>
+              </div>
+              <div class="site-photo">
+                <div class="site-photo-copy">
+                  <h2>African Minds. Global Impact.</h2>
+                  <p>
+                    Africa's brightest minds are shaping a future where
+                    intelligence drives change and ideas become impact.
+                  </p>
+                </div>
+                <div class="carousel-dots" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span
+                  ><span></span>
+                </div>
+              </div>
+              <div class="about-strip">
+                <small>About</small>
+                <h3>WHO WE ARE</h3>
+                <p>
+                  <strong>Our Mission</strong><br />With a shared commitment to
+                  a brighter African future, we intend to overcome the
+                  challenges facing our community through knowledge, advocacy,
+                  and action.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="project-meta reveal visible" aria-label="Project summary">
+            <article class="meta-card">
+              <div class="meta-label">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a5 5 0 0 1 5 5v1h1a3 3 0 0 1 3 3v7a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-7a3 3 0 0 1 3-3h1V7a5 5 0 0 1 5-5Zm3 6V7a3 3 0 1 0-6 0v1h6Z"
+                  />
+                </svg>
+                Role
+              </div>
+              <strong>Product Designer</strong>
+              <span>+ Temporary Lead</span>
+            </article>
+            <article class="meta-card">
+              <div class="meta-label">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2a10 10 0 1 1 0 20a10 10 0 0 1 0-20Zm1 5h-2v6l5 3l1-1.73l-4-2.27V7Z"
+                  />
+                </svg>
+                Duration
+              </div>
+              <strong>16–18 Weeks</strong>
+              <span>Planned 12 weeks</span>
+            </article>
+            <article class="meta-card">
+              <div class="meta-label">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M4 5a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-3v2h3v2H7v-2h3v-2H7a3 3 0 0 1-3-3V5Zm3-1a1 1 0 0 0-1 1v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H7Z"
+                  />
+                </svg>
+                Platform
+              </div>
+              <strong>Web and Mobile</strong>
+            </article>
+            <article class="meta-card">
+              <div class="meta-label">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2L2 7l10 5l10-5l-10-5Zm0 7.76L6.47 7L12 4.24L17.53 7L12 9.76ZM2 11l10 5l10-5v2.24l-10 5l-10-5V11Zm0 5l10 5l10-5v2.24l-10 5l-10-5V16Z"
+                  />
+                </svg>
+                Scope
+              </div>
+              <strong>Redesign + Features + Admin</strong>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="browser-stack" aria-label="Layered preview of redesigned Gataama website screens">
-          <div class="browser-card side-a" aria-hidden="true">
-            <div class="browser-top"><span class="traffic"></span><span class="traffic"></span><span class="traffic"></span><span class="browser-url"></span></div>
-            <div class="site-shot"><div class="shot-grid"><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+      <section class="section section-tight" id="case-study">
+        <div class="container-narrow copy-columns reveal">
+          <div>
+            <p class="section-kicker">Overview</p>
+            <h2 class="section-title">
+              From scattered content to a <em>credible product ecosystem.</em>
+            </h2>
           </div>
-          <div class="browser-card side-b" aria-hidden="true">
-            <div class="browser-top"><span class="traffic"></span><span class="traffic"></span><span class="traffic"></span><span class="browser-url"></span></div>
-            <div class="site-shot"><div class="shot-hero"><div class="shot-title"></div><div class="shot-image"></div></div></div>
+          <div class="body-copy">
+            <p>
+              Gataama needed more than a visual refresh. The public website was
+              hard to navigate, inconsistent across pages, and disconnected from
+              the operational tools the team needed to manage content, events,
+              petitions, country profiles, and community engagement.
+            </p>
+            <p>
+              I rebuilt the experience around product design fundamentals:
+              clearer information architecture, a more persuasive brand story,
+              reusable UI components, and an admin dashboard that made the
+              platform easier to maintain after launch.
+            </p>
           </div>
-          <div class="browser-card main">
-            <div class="browser-top"><span class="traffic"></span><span class="traffic"></span><span class="traffic"></span><span class="browser-url"></span></div>
-            <div class="site-shot">
-              <div class="shot-hero"><div class="shot-title"></div><div class="shot-image"></div></div>
-              <div class="shot-grid"><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Project goals</p>
+          <h2 class="section-title">
+            Create a digital home that feels modern, trustworthy, and simple to
+            operate.
+          </h2>
+          <div class="card-grid">
+            <article class="insight-card">
+              <span class="card-number">01</span>
+              <h3>Clarify the story</h3>
+              <p>
+                Restructure the homepage and content pages so visitors quickly
+                understand Gataama's mission, programs, petitions, and impact.
+              </p>
+            </article>
+            <article class="insight-card">
+              <span class="card-number">02</span>
+              <h3>Design for action</h3>
+              <p>
+                Make key pathways such as donation, country exploration, blogs,
+                petitions, and conference registration easier to discover.
+              </p>
+            </article>
+            <article class="insight-card">
+              <span class="card-number">03</span>
+              <h3>Support internal teams</h3>
+              <p>
+                Create an admin environment for publishing, moderation,
+                analytics, and platform management without engineering
+                dependency.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">The problem</p>
+          <h2 class="section-title">
+            The old platform created friction for visitors and administrators.
+          </h2>
+          <div class="problem-panel">
+            <p class="lead">
+              The experience lacked a cohesive system. Users had to work too
+              hard to understand where they were, what Gataama offered, and how
+              to participate. Admin users also lacked a structured workflow for
+              keeping the platform alive.
+            </p>
+            <ul class="problem-list">
+              <li>
+                Navigation labels and page hierarchy did not match user
+                expectations.
+              </li>
+              <li>
+                Important calls to action competed with low-priority content.
+              </li>
+              <li>
+                Visual styles, spacing, and content patterns varied from section
+                to section.
+              </li>
+              <li>
+                Country, blog, petition, and conference flows needed clearer
+                management tools.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Process</p>
+          <h2 class="section-title">
+            A practical design process built around discovery, structure, and
+            iteration.
+          </h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <strong>01 · Audit</strong>
+              <div>
+                <h3>Experience and content review</h3>
+                <p>
+                  I mapped the existing pages, identified duplicated content,
+                  reviewed visual inconsistencies, and documented gaps in admin
+                  workflows.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <strong>02 · Strategy</strong>
+              <div>
+                <h3>Information architecture</h3>
+                <p>
+                  The platform was reorganized around public discovery,
+                  community action, editorial publishing, and internal
+                  management.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <strong>03 · Design</strong>
+              <div>
+                <h3>Interface system and prototypes</h3>
+                <p>
+                  I designed high-fidelity responsive screens, interaction
+                  states, card systems, dashboard modules, and content
+                  templates.
+                </p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <strong>04 · Handoff</strong>
+              <div>
+                <h3>Implementation-ready assets</h3>
+                <p>
+                  Components, layouts, content rules, and acceptance notes were
+                  prepared to keep the final build aligned with the product
+                  vision.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Research insights</p>
+          <h2 class="section-title">
+            The redesign centered on user trust, orientation, and confidence.
+          </h2>
+          <div class="research-board">
+            <article class="research-card">
+              <span class="card-number">Insight 01</span>
+              <h3>Visitors needed immediate context.</h3>
+              <p>
+                People should understand the organization's purpose before being
+                asked to donate, sign, read, or register.
+              </p>
+            </article>
+            <article class="research-card">
+              <span class="card-number">Insight 02</span>
+              <h3>Content needed stronger hierarchy.</h3>
+              <p>
+                Programs, countries, articles, and petitions required repeatable
+                patterns so each page felt connected to the same product.
+              </p>
+            </article>
+            <article class="research-card wide">
+              <span class="card-number">Insight 03</span>
+              <h3>Admins needed a control room, not scattered tools.</h3>
+              <p>
+                The admin dashboard had to bring publishing, moderation, content
+                creation, analytics, and user management into one predictable
+                system.
+              </p>
+              <div class="quote-box">
+                A scalable platform is not only what visitors see — it is also
+                how confidently internal teams can keep it accurate, current,
+                and useful.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Success metrics</p>
+          <h2 class="section-title">
+            The target experience was measured against clarity and operational
+            readiness.
+          </h2>
+          <div class="metrics-board">
+            <article class="metric-tile">
+              <strong>5</strong
+              ><span
+                >Core public journeys redesigned for discovery and action.</span
+              >
+            </article>
+            <article class="metric-tile">
+              <strong>12+</strong
+              ><span
+                >Reusable content and interface patterns for future
+                growth.</span
+              >
+            </article>
+            <article class="metric-tile">
+              <strong>4</strong
+              ><span
+                >Admin workflow groups covering publishing, analytics, users,
+                and settings.</span
+              >
+            </article>
+            <article class="metric-tile">
+              <strong>100%</strong
+              ><span
+                >Responsive coverage across desktop, tablet, and mobile
+                breakpoints.</span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow copy-columns reverse reveal">
+          <div class="wireframe-row">
+            <article class="wireframe">
+              <div class="wireframe-ui">
+                <div class="ui-topline"></div>
+                <div class="ui-hero"></div>
+                <div class="ui-grid">
+                  <span class="ui-block"></span><span class="ui-block"></span
+                  ><span class="ui-block"></span>
+                </div>
+              </div>
+            </article>
+            <article class="style-board">
+              <p class="section-kicker">Visual system</p>
+              <div class="color-row">
+                <span class="swatch"></span><span class="swatch"></span
+                ><span class="swatch"></span><span class="swatch"></span
+                ><span class="swatch"></span>
+              </div>
+              <div class="type-sample">Global <em>Impact</em></div>
+            </article>
+          </div>
+          <div>
+            <p class="section-kicker">Design direction</p>
+            <h2 class="section-title">
+              A confident system with editorial scale and cultural warmth.
+            </h2>
+            <p class="lead">
+              The visual language balances a polished global nonprofit presence
+              with energetic signals from African culture, advocacy, community,
+              and action.
+            </p>
+            <ul class="check-list">
+              <li>Large editorial typography for mission-led storytelling.</li>
+              <li>High-contrast buttons and repeated action patterns.</li>
+              <li>
+                Reusable cards for programs, countries, articles, and petitions.
+              </li>
+              <li>
+                Accessible spacing, states, and responsive component behavior.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Public website</p>
+          <h2 class="section-title">
+            The new website turns browsing into a guided product journey.
+          </h2>
+          <div class="screen-row">
+            <article class="screen-shot">
+              <div class="screen-bar">
+                <span>Gataama</span><span>Donate</span>
+              </div>
+              <div class="screen-hero">
+                <h3>African Minds. Global Impact.</h3>
+              </div>
+              <div class="screen-content">
+                <strong>About · Who We Are</strong>
+                <div class="screen-cards">
+                  <span class="screen-mini-card"></span
+                  ><span class="screen-mini-card"></span
+                  ><span class="screen-mini-card"></span>
+                </div>
+              </div>
+            </article>
+            <article class="screen-shot news">
+              <div class="screen-bar">
+                <span>Countries</span><span>Explore</span>
+              </div>
+              <div class="screen-hero">
+                <h3>Explore stories, petitions, and action by region.</h3>
+              </div>
+              <div class="screen-content">
+                <strong>Country intelligence cards</strong>
+                <div class="screen-cards">
+                  <span class="screen-mini-card"></span
+                  ><span class="screen-mini-card"></span
+                  ><span class="screen-mini-card"></span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="card-grid two">
+            <article class="dark-card">
+              <span class="card-number">Homepage</span>
+              <h3>Clear opening message</h3>
+              <p>
+                The hero, about section, mission content, and donation pathway
+                were arranged to create confidence before conversion.
+              </p>
+            </article>
+            <article class="dark-card">
+              <span class="card-number">Content pages</span>
+              <h3>Repeatable publishing patterns</h3>
+              <p>
+                Country, blog, petition, and conference layouts use consistent
+                cards and filters to reduce learning effort.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Admin dashboard</p>
+          <h2 class="section-title">
+            A dark operational workspace for managing content and platform
+            health.
+          </h2>
+          <p class="lead">
+            The admin side mirrors the public product's clarity while
+            prioritizing dense information, status visibility, form confidence,
+            and quick task completion.
+          </p>
+          <div class="admin-grid">
+            <article class="admin-screen large">
+              <div class="admin-header">
+                <span class="admin-pill"></span><span class="admin-pill"></span>
+              </div>
+              <div class="admin-gridlet">
+                <div class="admin-stat">
+                  <div class="admin-line cyan"></div>
+                  <div class="admin-line"></div>
+                  <div class="admin-line"></div>
+                </div>
+                <div class="admin-stat">
+                  <div class="admin-line green"></div>
+                  <div class="admin-line"></div>
+                  <div class="admin-line"></div>
+                </div>
+                <div class="admin-stat">
+                  <div class="admin-line red"></div>
+                  <div class="admin-line"></div>
+                  <div class="admin-line"></div>
+                </div>
+                <div class="admin-stat">
+                  <div class="admin-line purple"></div>
+                  <div class="admin-line"></div>
+                  <div class="admin-line"></div>
+                </div>
+              </div>
+            </article>
+            <article class="admin-screen">
+              <div class="admin-header"><span class="admin-pill"></span></div>
+              <div class="admin-table">
+                <span class="admin-table-row"></span
+                ><span class="admin-table-row"></span
+                ><span class="admin-table-row"></span
+                ><span class="admin-table-row"></span>
+              </div>
+            </article>
+            <article class="admin-screen">
+              <div class="admin-header"><span class="admin-pill"></span></div>
+              <div class="admin-gridlet">
+                <div class="admin-stat">
+                  <div class="admin-line cyan"></div>
+                </div>
+                <div class="admin-stat"><div class="admin-line red"></div></div>
+              </div>
+              <div class="admin-table">
+                <span class="admin-table-row"></span
+                ><span class="admin-table-row"></span>
+              </div>
+            </article>
+            <article class="admin-screen large">
+              <div class="admin-header">
+                <span class="admin-pill"></span><span class="admin-pill"></span>
+              </div>
+              <div class="admin-table">
+                <span class="admin-table-row"></span
+                ><span class="admin-table-row"></span
+                ><span class="admin-table-row"></span
+                ><span class="admin-table-row"></span
+                ><span class="admin-table-row"></span>
+              </div>
+            </article>
+          </div>
+          <div class="card-grid">
+            <article class="flow-card">
+              <span class="card-number">01</span>
+              <h3>Dashboard overview</h3>
+              <p>
+                Key content, traffic, donation, petition, and event signals are
+                summarized in one glanceable control surface.
+              </p>
+            </article>
+            <article class="flow-card">
+              <span class="card-number">02</span>
+              <h3>Content management</h3>
+              <p>
+                Admins can create, edit, review, and publish pages using
+                predictable forms and status labels.
+              </p>
+            </article>
+            <article class="flow-card">
+              <span class="card-number">03</span>
+              <h3>Operational confidence</h3>
+              <p>
+                Tables, filters, empty states, and confirmation states make
+                routine admin decisions safer and faster.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Responsive system</p>
+          <h2 class="section-title">
+            Every major pattern was adapted for desktop, tablet, and mobile.
+          </h2>
+          <div class="device-showcase">
+            <article class="device phone">
+              <div class="device-inner">
+                <div class="device-hero"></div>
+                <div class="device-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </article>
+            <article class="device tablet">
+              <div class="device-inner">
+                <div class="device-hero"></div>
+                <div class="device-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </article>
+            <article class="device desktop">
+              <div class="device-inner">
+                <div class="device-hero"></div>
+                <div class="device-lines">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <p class="section-kicker">Final screens</p>
+          <h2 class="section-title">
+            The final direction connects brand storytelling with scalable
+            product operations.
+          </h2>
+          <div class="final-row">
+            <article
+              class="final-shot flags"
+              aria-label="Country directory preview"
+            >
+              <div class="flag-grid">
+                <span class="flag"></span><span class="flag"></span
+                ><span class="flag"></span><span class="flag"></span
+                ><span class="flag"></span><span class="flag"></span
+                ><span class="flag"></span><span class="flag"></span
+                ><span class="flag"></span><span class="flag"></span>
+              </div>
+            </article>
+            <article
+              class="final-shot admin-final"
+              aria-label="Admin analytics preview"
+            >
+              <p class="section-kicker">Analytics</p>
+              <h3>Admin Overview</h3>
+              <div class="admin-final-grid">
+                <div class="admin-final-card">
+                  <span class="admin-line cyan"></span>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div class="admin-final-card">
+                  <span class="admin-line red"></span>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div class="admin-final-card">
+                  <span class="admin-line green"></span>
+                  <div class="progress"><span></span></div>
+                </div>
+                <div class="admin-final-card">
+                  <span class="admin-line purple"></span>
+                  <div class="progress"><span></span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container-narrow reveal">
+          <div class="handoff-panel">
+            <p class="section-kicker">Handoff and outcome</p>
+            <h2 class="section-title">
+              A complete product foundation for the next stage of growth.
+            </h2>
+            <p class="lead">
+              The redesign gave Gataama a clearer public presence and a more
+              maintainable internal system. The work packaged strategy, UX
+              decisions, UI components, and admin workflows into a product
+              direction the team could build on.
+            </p>
+            <div class="handoff-grid">
+              <article class="outcome-card">
+                <span class="card-number">Design system</span>
+                <h3>Reusable interface rules</h3>
+                <p>
+                  Cards, buttons, grids, forms, states, and responsive rules
+                  were documented for consistent future expansion.
+                </p>
+              </article>
+              <article class="outcome-card">
+                <span class="card-number">Content strategy</span>
+                <h3>Clear publishing model</h3>
+                <p>
+                  Content templates support country pages, articles, petitions,
+                  events, and mission-led storytelling.
+                </p>
+              </article>
+              <article class="outcome-card">
+                <span class="card-number">Admin workflows</span>
+                <h3>Operational ownership</h3>
+                <p>
+                  The dashboard gives non-technical teammates a clearer path to
+                  manage and monitor the platform.
+                </p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section reveal" id="overview">
-        <p class="section-kicker">Project details</p>
-        <h2>Designing a clearer path from cultural discovery to confident purchase.</h2>
-        <p class="section-lede">
-          The redesign focuses on product storytelling, information architecture, and an interface language that feels modern
-          without losing Gataama’s rich visual character. Every section was structured to help users understand the brand,
-          browse confidently, and complete key journeys with less friction.
-        </p>
-        <div class="grid four mt-lg">
-          <article class="card"><p class="metric-label">Role</p><p class="metric-value">Product Designer</p><p>UX research, UI design, responsive systems, interaction strategy.</p></article>
-          <article class="card"><p class="metric-label">Timeline</p><p class="metric-value">6 Weeks</p><p>Discovery, synthesis, wireframes, visual design, and handoff.</p></article>
-          <article class="card"><p class="metric-label">Platform</p><p class="metric-value">Responsive Web</p><p>Desktop-first presentation refined for tablet and mobile commerce flows.</p></article>
-          <article class="card"><p class="metric-label">Focus</p><p class="metric-value">UX + UI System</p><p>Navigation clarity, product hierarchy, brand trust, and checkout readiness.</p></article>
+      <section class="section quote-section">
+        <div class="container-narrow closing-quote reveal">
+          <blockquote>
+            “The redesign turns Gataama into a focused product experience — not
+            just a beautiful website, but a clearer path to trust, discovery,
+            and action.”
+          </blockquote>
+          <p>
+            Udoh Blessing shaped the project as a product designer: connecting
+            research, strategy, interface craft, and system thinking into one
+            coherent case-study experience.
+          </p>
         </div>
       </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Problem statement</p>
-        <h2>The previous experience had expressive visuals, but the journey needed stronger structure.</h2>
-        <div class="grid two mt-lg">
-          <article class="card">
-            <h3>Core challenge</h3>
-            <p>
-              Users needed a faster way to understand what Gataama offers, why the products matter, and which actions to take
-              next. The interface required clearer hierarchy, stronger product context, and more consistent conversion cues.
-            </p>
-            <div class="divider-accent" aria-hidden="true"></div>
-          </article>
-          <article class="card">
-            <h3>Design goals</h3>
-            <ul class="list">
-              <li>Make brand storytelling and commerce actions feel connected.</li>
-              <li>Improve scanning with modular cards, intentional spacing, and clear content sections.</li>
-              <li>Create a reusable design system that scales across product, content, and checkout pages.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="research">
-        <p class="section-kicker">Discovery process</p>
-        <h2>Research translated cultural intent into practical product decisions.</h2>
-        <p class="section-lede">
-          The UX process mapped user expectations across discovery, product evaluation, cart review, and post-purchase trust.
-          Findings were converted into content priorities, interface states, and reusable components.
-        </p>
-        <div class="timeline mt-lg">
-          <div class="timeline-item card"><span class="timeline-marker">01 Audit</span><p>Reviewed navigation, hero communication, product cards, checkout cues, and moments where users might lose context.</p></div>
-          <div class="timeline-item card"><span class="timeline-marker">02 Users</span><p>Defined shopper needs around authenticity, product quality, sizing clarity, delivery reassurance, and simple browsing.</p></div>
-          <div class="timeline-item card"><span class="timeline-marker">03 Strategy</span><p>Reframed the website around three jobs: introduce the story, make products easy to compare, and reduce purchase hesitation.</p></div>
-          <div class="timeline-item card"><span class="timeline-marker">04 System</span><p>Built a dark premium system with energetic accents, editorial typography, responsive modules, and accessible contrast.</p></div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">User persona</p>
-        <h2>Designing for a style-conscious shopper who values meaning as much as aesthetics.</h2>
-        <div class="grid three mt-lg">
-          <article class="card"><h3>Motivations</h3><ul class="persona-list"><li>Discover products with cultural significance.</li><li>Understand quality, materials, and styling context quickly.</li><li>Buy from a brand that feels credible and contemporary.</li></ul></article>
-          <article class="card"><h3>Pain points</h3><ul class="persona-list"><li>Unclear product categories slow browsing.</li><li>Weak hierarchy makes key actions harder to identify.</li><li>Missing reassurance can create checkout hesitation.</li></ul></article>
-          <article class="card"><h3>UX opportunities</h3><ul class="persona-list"><li>Use visual storytelling to create emotional connection.</li><li>Surface product benefits and delivery information earlier.</li><li>Standardize cards, buttons, badges, and form states.</li></ul></article>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Information architecture</p>
-        <h2>A modular site structure keeps the brand story visible while supporting faster shopping.</h2>
-        <div class="grid two mt-lg">
-          <article class="card"><h3>Primary navigation</h3><p>Home, collections, new arrivals, story, journal, cart, and account were organized around shopper intent instead of internal brand categories.</p></article>
-          <article class="card"><h3>Content hierarchy</h3><p>The homepage sequence moves from campaign story to featured products, social proof, editorial content, and checkout reassurance.</p></article>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Wireframes</p>
-        <h2>Low-fidelity layouts defined rhythm before visual styling was applied.</h2>
-        <div class="grid two mt-lg">
-          <div class="wireframe" aria-label="Homepage wireframe mockup">
-            <div class="wireframe-row"></div>
-            <div class="wireframe-hero"><div class="wireframe-card red"></div><div class="wireframe-card"></div></div>
-            <div class="wireframe-grid"><div class="wireframe-card"></div><div class="wireframe-card"></div><div class="wireframe-card"></div></div>
-          </div>
-          <div class="wireframe" aria-label="Product details wireframe mockup">
-            <div class="wireframe-row"></div>
-            <div class="wireframe-hero"><div class="wireframe-card"></div><div class="wireframe-card red"></div></div>
-            <div class="wireframe-grid"><div class="wireframe-card"></div><div class="wireframe-card"></div><div class="wireframe-card"></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Visual exploration</p>
-        <h2>The art direction pairs Afrocentric warmth with a sleek digital product language.</h2>
-        <div class="grid two mt-lg">
-          <article class="image-tile"><div class="art"></div><p class="caption"><span>Campaign direction</span><span>Warm · Editorial</span></p></article>
-          <article class="image-tile"><div class="art"></div><p class="caption"><span>Product storytelling</span><span>Bold · Cultural</span></p></article>
-        </div>
-      </section>
-
-      <section class="section reveal" id="design">
-        <p class="section-kicker">UI Design</p>
-        <h2>High-fidelity screens create a premium commerce experience with clear hierarchy.</h2>
-        <p class="section-lede">
-          The final interface uses immersive hero moments, compact product cards, clear calls to action, and structured content
-          blocks that can be reused across marketing and commerce pages.
-        </p>
-        <div class="dashboard mt-lg" aria-label="High fidelity product interface preview">
-          <div class="dash-top"><div class="dash-title"></div><div class="dash-controls"><span></span><span></span><span></span></div></div>
-          <div class="dash-grid">
-            <div class="dash-panel"><div class="bar accent wide"></div><div class="bar mid"></div><div class="bar short"></div></div>
-            <div class="dash-panel"><div class="bar wide"></div><div class="bar accent mid"></div><div class="bar short"></div></div>
-            <div class="dash-panel"><div class="bar wide"></div><div class="bar mid"></div><div class="bar accent short"></div></div>
-            <div class="dash-panel"><div class="bar accent mid"></div><div class="bar wide"></div><div class="bar short"></div></div>
-            <div class="dash-panel"><div class="bar wide"></div><div class="bar short"></div><div class="bar accent mid"></div></div>
-            <div class="dash-panel"><div class="bar mid"></div><div class="bar accent wide"></div><div class="bar short"></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Design system</p>
-        <h2>A compact component system keeps future pages consistent and easier to ship.</h2>
-        <div class="grid two mt-lg">
-          <article class="card">
-            <h3>Color palette</h3>
-            <div class="palette" aria-label="Gataama color palette"><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div><div class="swatch"></div></div>
-          </article>
-          <article class="card type-specimen">
-            <p class="type-mono">Typography system</p>
-            <p class="type-serif">Editorial culture meets digital clarity.</p>
-            <p class="type-sans">Inter supports readable product information, navigation, and transactional UI.</p>
-          </article>
-        </div>
-        <div class="system-board mt-lg">
-          <div class="components-grid">
-            <div class="tiny-card"><div class="bar accent mid"></div><div class="bar wide"></div><div class="input-line"></div></div>
-            <div class="tiny-card"><div class="bar wide"></div><div class="bar mid"></div><div class="button-row"><span class="mini-button"></span><span class="mini-button dark"></span></div></div>
-            <div class="tiny-card"><div class="bar accent short"></div><div class="bar wide"></div><div class="bar mid"></div></div>
-            <div class="tiny-card"><div class="bar mid"></div><div class="input-line"></div><div class="input-line"></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Responsive design</p>
-        <h2>The system adapts from immersive desktop storytelling to focused mobile shopping.</h2>
-        <div class="responsive-board mt-lg">
-          <div class="phone-tablet">
-            <div class="device phone"><div class="device-screen"><div class="device-hero"></div><div class="device-lines"><span></span><span></span><span></span></div></div></div>
-            <div class="device tablet"><div class="device-screen"><div class="device-hero"></div><div class="device-lines"><span></span><span></span><span></span></div></div></div>
-            <div class="device desktop"><div class="device-screen"><div class="device-hero"></div><div class="device-lines"><span></span><span></span><span></span></div></div></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section reveal" id="outcome">
-        <p class="section-kicker">Final experience</p>
-        <h2>A polished website direction that feels expressive, usable, and ready to scale.</h2>
-        <div class="final-screen mt-lg" aria-label="Final Gataama homepage concept">
-          <div class="final-red"><h3>Wear the story. Carry the culture.</h3></div>
-          <div class="final-products"><div class="product-card"><div class="product-img"></div></div><div class="product-card"><div class="product-img"></div></div><div class="product-card"><div class="product-img"></div></div><div class="product-card"><div class="product-img"></div></div></div>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <p class="section-kicker">Checkout readiness</p>
-        <h2>Commerce details were designed to reduce hesitation at the end of the journey.</h2>
-        <div class="checkout-flow mt-lg">
-          <article class="checkout-card"><h3>Cart clarity</h3><p>Product summaries, size details, quantity controls, and delivery reassurance remain visible in one compact review space.</p></article>
-          <article class="checkout-card"><h3>Form confidence</h3><p>Accessible input states, concise labels, payment indicators, and progress feedback make checkout feel predictable.</p></article>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <div class="quote">
-          <p>“The redesign turns Gataama into a focused product experience — not just a beautiful website, but a clearer path to trust, discovery, and purchase.”</p>
-        </div>
-      </section>
-
-      <footer class="footer">
-        <span>© Udoh Blessing · Product Designer</span>
-        <a href="#top">Back to top ↑</a>
-      </footer>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span>© Udoh Blessing · Product Designer</span>
+        <a class="back-link" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
 
     <script>
       const root = document.documentElement;
@@ -1745,19 +2381,25 @@
         localStorage.setItem("gataama-theme", isLight ? "light" : "dark");
       });
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
+      const revealTargets = document.querySelectorAll(".reveal");
 
-      document.querySelectorAll(".reveal").forEach((section) => observer.observe(section));
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+
+        revealTargets.forEach((target) => observer.observe(target));
+      } else {
+        revealTargets.forEach((target) => target.classList.add("visible"));
+      }
     </script>
   </body>
 </html>
