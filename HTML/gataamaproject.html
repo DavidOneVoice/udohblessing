@@ -355,12 +355,14 @@
         position: relative;
         height: clamp(430px, 48vw, 660px);
         margin-top: clamp(150px, 13vw, 220px);
+        isolation: isolate;
       }
 
       .hero-glow {
         position: absolute;
         left: 50%;
         top: 58%;
+        z-index: -1;
         width: min(100%, 1100px);
         height: 330px;
         transform: translate(-50%, -50%);
@@ -373,255 +375,32 @@
         filter: blur(26px);
       }
 
-      .browser-card,
-      .dashboard-card {
+      .mockup-layer {
         position: absolute;
-        overflow: hidden;
-        border-radius: 10px;
-        background: #fff;
-        box-shadow: var(--shadow);
+        display: block;
+        margin: 0;
+        line-height: 0;
       }
 
-      .browser-card {
-        left: 9%;
-        top: 5%;
+      .mockup-layer img {
+        width: 100%;
+        height: auto;
+        user-select: none;
+      }
+
+      .home-mockup {
+        left: 2%;
+        top: -2%;
         z-index: 2;
-        width: min(74vw, 1010px);
-        min-width: 730px;
-        aspect-ratio: 1.64 / 1;
-        transform: rotate(-2.1deg);
+        width: min(86vw, 1017px);
       }
 
-      .dashboard-card {
-        right: 5%;
-        top: 17%;
+      .dashboard-mockup {
+        right: 2%;
+        top: 15%;
         z-index: 1;
-        width: min(39vw, 520px);
-        min-width: 360px;
-        aspect-ratio: 0.74 / 1;
-        filter: blur(2px);
-        opacity: 0.82;
-        transform: rotate(2.4deg);
-      }
-
-      .browser-top {
-        display: grid;
-        grid-template-columns: 170px 1fr auto;
-        align-items: center;
-        height: 76px;
-        padding: 0 48px;
-        border-bottom: 4px solid var(--orange);
-        color: #2b2b2b;
-        font-size: 13px;
-        font-weight: 600;
-      }
-
-      .gataama-mark {
-        display: grid;
-        gap: 4px;
-        justify-items: start;
-        color: var(--orange);
-        font-weight: 800;
-      }
-
-      .mark-head {
-        width: 24px;
-        height: 24px;
-        border: 2px solid #151515;
-        border-radius: 50% 50% 44% 44%;
-        background: linear-gradient(#fff 40%, #111 41% 46%, #fff 47%);
-      }
-
-      .browser-nav,
-      .dashboard-nav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-      }
-
-      .browser-nav span:first-child {
-        color: var(--orange);
-      }
-
-      .donate-btn {
-        border-radius: 6px;
-        background: var(--orange);
-        color: #fff;
-        padding: 13px 24px;
-        font-size: 11px;
-        font-weight: 800;
-      }
-
-      .site-photo {
-        position: relative;
-        display: grid;
-        place-items: center;
-        min-height: 350px;
-        background:
-          linear-gradient(rgba(4, 7, 15, 0.48), rgba(4, 7, 15, 0.48)),
-          radial-gradient(circle at 44% 34%, #ffbb3f 0 3%, transparent 3.2%),
-          radial-gradient(circle at 54% 30%, #0dbe71 0 5%, transparent 5.2%),
-          radial-gradient(circle at 68% 24%, #ee2636 0 4%, transparent 4.2%),
-          linear-gradient(
-            130deg,
-            #15272e 0%,
-            #5b6f55 32%,
-            #7b2d33 55%,
-            #1f3c68 100%
-          );
-        color: #fff;
-      }
-
-      .site-photo::before,
-      .site-photo::after {
-        position: absolute;
-        inset: 0;
-        content: "";
-      }
-
-      .site-photo::before {
-        background:
-          linear-gradient(
-            80deg,
-            transparent 0 34%,
-            rgba(255, 204, 55, 0.86) 34.5% 36%,
-            transparent 36.5%
-          ),
-          linear-gradient(
-            110deg,
-            transparent 0 57%,
-            rgba(37, 189, 113, 0.85) 57.5% 59%,
-            transparent 59.5%
-          ),
-          linear-gradient(
-            74deg,
-            transparent 0 68%,
-            rgba(232, 39, 48, 0.84) 68.5% 70%,
-            transparent 70.5%
-          );
-        filter: blur(0.4px);
-        opacity: 0.85;
-      }
-
-      .site-photo-copy {
-        position: relative;
-        z-index: 1;
-        max-width: 770px;
-        padding: 50px;
-        text-align: center;
-      }
-
-      .site-photo h2 {
-        margin: 0 0 14px;
-        font-size: clamp(2rem, 4vw, 4.1rem);
-        letter-spacing: -0.04em;
-        line-height: 0.95;
-      }
-
-      .site-photo p {
-        margin: 0 auto;
-        max-width: 620px;
-        color: rgba(255, 255, 255, 0.88);
-        font-size: 17px;
-        line-height: 1.5;
-      }
-
-      .carousel-dots {
-        position: absolute;
-        left: 50%;
-        bottom: 40px;
-        display: flex;
-        gap: 7px;
-        transform: translateX(-50%);
-      }
-
-      .carousel-dots span {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.52);
-      }
-
-      .carousel-dots span:first-child {
-        background: var(--orange);
-      }
-
-      .about-strip {
-        min-height: 250px;
-        padding: 64px 82px;
-        background: #fff;
-        color: #121212;
-      }
-
-      .about-strip small {
-        color: #b7b7b7;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-      }
-
-      .about-strip h3 {
-        margin: 14px 0 58px;
-        font-size: 27px;
-      }
-
-      .about-strip p {
-        margin: 0 auto;
-        max-width: 670px;
-        text-align: center;
-        font-size: 13px;
-        line-height: 1.6;
-      }
-
-      .dashboard-card {
-        padding: 28px;
-        color: #1b1f1f;
-      }
-
-      .dashboard-top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 58px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      }
-
-      .dashboard-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 18px;
-        margin-top: 28px;
-      }
-
-      .dash-widget {
-        min-height: 90px;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
-        background: #fff;
-        padding: 16px;
-      }
-
-      .chart-bars {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        gap: 32px;
-        grid-column: 1 / -1;
-        min-height: 230px;
-      }
-
-      .chart-bars span {
-        width: 70px;
-        border-radius: 6px 6px 0 0;
-        background: linear-gradient(to top, #5ad46f 78%, #ff5b5b 78%);
-      }
-
-      .chart-bars span:nth-child(1) {
-        height: 178px;
-      }
-
-      .chart-bars span:nth-child(2) {
-        height: 204px;
+        width: min(53vw, 679px);
+        opacity: 0.96;
       }
 
       .project-meta {
@@ -1439,13 +1218,14 @@
           padding-top: 170px;
         }
 
-        .browser-card {
-          left: 2%;
-          min-width: 620px;
+        .home-mockup {
+          left: -1%;
+          width: min(94vw, 960px);
         }
 
-        .dashboard-card {
+        .dashboard-mockup {
           right: -8%;
+          width: min(60vw, 620px);
         }
 
         .project-meta,
@@ -1495,47 +1275,20 @@
         .hero-visual {
           height: auto;
           margin-top: 78px;
+          overflow: visible;
         }
 
         .hero-glow,
-        .dashboard-card {
+        .dashboard-mockup {
           display: none;
         }
 
-        .browser-card {
+        .home-mockup {
           position: relative;
-          left: auto;
+          left: 50%;
           top: auto;
-          width: 100%;
-          min-width: 0;
-          transform: rotate(-1deg);
-        }
-
-        .browser-top {
-          grid-template-columns: 1fr auto;
-          height: 54px;
-          padding: 0 18px;
-        }
-
-        .browser-nav {
-          display: none;
-        }
-
-        .donate-btn {
-          padding: 9px 12px;
-        }
-
-        .site-photo {
-          min-height: 250px;
-        }
-
-        .site-photo-copy {
-          padding: 28px;
-        }
-
-        .about-strip {
-          min-height: 190px;
-          padding: 32px;
+          width: min(118vw, 620px);
+          transform: translateX(-50%);
         }
 
         .project-meta,
@@ -1659,61 +1412,32 @@
             aria-label="Gataama website and admin dashboard mockups"
           >
             <div class="hero-glow" aria-hidden="true"></div>
-            <article
-              class="dashboard-card"
-              aria-label="Admin dashboard preview"
+            <figure
+              class="mockup-layer dashboard-mockup"
+              aria-label="Country donations dashboard preview"
             >
-              <div class="dashboard-top">
-                <strong>Dashboard</strong>
-                <span class="file-chip">LIVE</span>
-              </div>
-              <div class="dashboard-grid">
-                <div class="dash-widget"></div>
-                <div class="dash-widget"></div>
-                <div class="chart-bars" aria-hidden="true">
-                  <span></span><span></span>
-                </div>
-              </div>
-            </article>
-            <article
-              class="browser-card"
+              <img
+                src="../ASSETS/Country Donations dashboard screen.png"
+                alt="Country donations dashboard screen"
+                width="679"
+                height="515"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
+            <figure
+              class="mockup-layer home-mockup"
               aria-label="Gataama redesigned homepage preview"
             >
-              <div class="browser-top">
-                <div class="gataama-mark">
-                  <span class="mark-head" aria-hidden="true"></span
-                  ><span>Gataama</span>
-                </div>
-                <nav class="browser-nav" aria-label="Preview navigation">
-                  <span>Home</span><span>What we do</span><span>Country</span
-                  ><span>Blog</span><span>Petition</span><span>Conference</span>
-                </nav>
-                <span class="donate-btn">Make a Donation</span>
-              </div>
-              <div class="site-photo">
-                <div class="site-photo-copy">
-                  <h2>African Minds. Global Impact.</h2>
-                  <p>
-                    Africa's brightest minds are shaping a future where
-                    intelligence drives change and ideas become impact.
-                  </p>
-                </div>
-                <div class="carousel-dots" aria-hidden="true">
-                  <span></span><span></span><span></span><span></span
-                  ><span></span>
-                </div>
-              </div>
-              <div class="about-strip">
-                <small>About</small>
-                <h3>WHO WE ARE</h3>
-                <p>
-                  <strong>Our Mission</strong><br />With a shared commitment to
-                  a brighter African future, we intend to overcome the
-                  challenges facing our community through knowledge, advocacy,
-                  and action.
-                </p>
-              </div>
-            </article>
+              <img
+                src="../ASSETS/homescreenshot.png"
+                alt="Gataama redesigned homepage screenshot"
+                width="1017"
+                height="796"
+                loading="eager"
+                decoding="async"
+              />
+            </figure>
           </div>
 
           <div class="project-meta reveal visible" aria-label="Project summary">
