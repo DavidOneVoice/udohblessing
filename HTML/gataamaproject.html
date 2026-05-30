@@ -1273,22 +1273,40 @@
         }
 
         .hero-visual {
+          display: grid;
+          gap: 18px;
           height: auto;
           margin-top: 78px;
           overflow: visible;
         }
 
-        .hero-glow,
-        .dashboard-mockup {
+        .hero-glow {
           display: none;
         }
 
-        .home-mockup {
+        .home-mockup,
+        .dashboard-mockup {
           position: relative;
-          left: 50%;
           top: auto;
-          width: min(118vw, 620px);
-          transform: translateX(-50%);
+          right: auto;
+          left: auto;
+          width: min(100%, 620px);
+        }
+
+        .home-mockup {
+          z-index: 2;
+          justify-self: start;
+          width: min(108vw, 620px);
+          transform: translateX(-4%);
+        }
+
+        .dashboard-mockup {
+          z-index: 1;
+          justify-self: end;
+          width: min(92vw, 520px);
+          margin-top: -34px;
+          opacity: 1;
+          transform: translateX(4%);
         }
 
         .project-meta,
