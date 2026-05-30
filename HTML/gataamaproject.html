@@ -1102,6 +1102,397 @@
     </style>
   </head>
 
+      .wire-line,
+      .wire-block,
+      .bar,
+      .input,
+      .tiny-block {
+        background: var(--surface-2);
+        border: 1px solid var(--hairline);
+        border-radius: 3px;
+      }
+
+      .wire-line {
+        height: 10px;
+      }
+
+      .wire-hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 5px;
+      }
+
+      .wire-block {
+        min-height: 43px;
+      }
+
+      .wire-block.red {
+        background: linear-gradient(135deg, rgba(255, 61, 54, 0.9), rgba(255, 61, 54, 0.32));
+      }
+
+      .wire-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+      }
+
+      .wire-grid .wire-block {
+        min-height: 24px;
+      }
+
+      .shot-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        margin-top: 10px;
+      }
+
+      .shot {
+        padding: 5px;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 5px;
+      }
+
+      .shot-photo {
+        height: 52px;
+        border-radius: 3px;
+      }
+
+      .caption {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        margin-top: 5px;
+        color: var(--soft);
+        font-size: 4px;
+      }
+
+      .analysis-board {
+        padding: 8px;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 5px;
+      }
+
+      .browser-mini {
+        overflow: hidden;
+        background: #101816;
+        border: 1px solid var(--hairline);
+        border-radius: 4px;
+      }
+
+      .browser-mini .browser-top {
+        height: 9px;
+        background: #0b1110;
+      }
+
+      .mini-screen {
+        padding: 7px;
+      }
+
+      .bar {
+        height: 4px;
+        margin-bottom: 4px;
+      }
+
+      .bar.aqua {
+        background: var(--aqua);
+        box-shadow: 0 0 8px rgba(15, 242, 230, 0.3);
+      }
+
+      .bar.red {
+        background: var(--red);
+      }
+
+      .bar.amber {
+        background: var(--amber);
+      }
+
+      .bar.w90 {
+        width: 90%;
+      }
+
+      .bar.w70 {
+        width: 70%;
+      }
+
+      .bar.w45 {
+        width: 45%;
+      }
+
+      .components {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+      }
+
+      .component-card {
+        padding: 7px;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 4px;
+      }
+
+      .palette {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+      }
+
+      .swatch {
+        height: 34px;
+        border: 1px solid var(--hairline);
+        border-radius: 3px;
+      }
+
+      .swatch:nth-child(1) {
+        background: #020403;
+      }
+
+      .swatch:nth-child(2) {
+        background: #0ff2e6;
+      }
+
+      .swatch:nth-child(3) {
+        background: #ff3d36;
+      }
+
+      .swatch:nth-child(4) {
+        background: #f2af4a;
+      }
+
+      .swatch:nth-child(5) {
+        background: #f5efe1;
+      }
+
+      .type-sample {
+        display: grid;
+        gap: 5px;
+      }
+
+      .type-serif {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 0.92;
+        letter-spacing: -0.06em;
+      }
+
+      .type-sans {
+        font-size: 8px;
+        font-weight: 650;
+        line-height: 1.15;
+        letter-spacing: -0.035em;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+      }
+
+      .matrix .card {
+        min-height: 56px;
+      }
+
+      .final-stack {
+        position: relative;
+        height: 154px;
+        margin-top: 14px;
+      }
+
+      .final-screen {
+        position: absolute;
+        overflow: hidden;
+        background: #fffdf8;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        border-radius: 4px;
+        box-shadow: var(--shadow);
+      }
+
+      .final-screen.one {
+        top: 6px;
+        left: 14px;
+        z-index: 4;
+        width: 178px;
+        height: 96px;
+        transform: rotate(-4deg);
+      }
+
+      .final-screen.two {
+        right: 17px;
+        bottom: 14px;
+        z-index: 3;
+        width: 152px;
+        height: 86px;
+        transform: rotate(2.8deg);
+      }
+
+      .final-screen.three {
+        top: 33px;
+        right: 0;
+        z-index: 2;
+        width: 87px;
+        height: 93px;
+        transform: rotate(7deg);
+      }
+
+      .final-inner {
+        padding: 7px;
+      }
+
+      .final-hero-red {
+        display: grid;
+        grid-template-columns: 1fr 0.7fr;
+        gap: 5px;
+        min-height: 38px;
+        padding: 5px;
+        background: #e64032;
+        border-radius: 3px;
+      }
+
+      .final-products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4px;
+        margin-top: 5px;
+      }
+
+      .final-product {
+        height: 22px;
+        background: #f2ead9;
+        border-radius: 2px;
+      }
+
+      .checkout {
+        display: grid;
+        gap: 7px;
+      }
+
+      .checkout-row {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 7px;
+      }
+
+      .form-card {
+        padding: 7px;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 5px;
+      }
+
+      .input {
+        height: 10px;
+        margin-bottom: 5px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        margin-top: 9px;
+      }
+
+      .stat {
+        padding: 7px;
+        text-align: center;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 4px;
+      }
+
+      .stat-value {
+        color: var(--text);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .stat-label {
+        margin-top: 4px;
+        color: var(--soft);
+        font-size: 4px;
+      }
+
+      .quote-card {
+        padding: 13px 10px;
+        text-align: center;
+        background: var(--surface);
+        border: 1px solid var(--hairline);
+        border-radius: 6px;
+      }
+
+      .quote-card p {
+        color: var(--text);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 26px;
+        padding-top: 10px;
+        color: var(--soft);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 4.5px;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        border-top: 1px solid var(--hairline);
+      }
+
+      footer a {
+        color: var(--aqua);
+      }
+
+      @media (min-width: 560px) {
+        .page {
+          width: min(100%, 390px);
+          padding-right: 34px;
+          padding-left: 34px;
+        }
+      }
+
+      @media (max-width: 330px) {
+        .page {
+          padding-right: 14px;
+          padding-left: 14px;
+        }
+
+        .meta-row,
+        .grid.three,
+        .matrix,
+        .stats {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 285px) {
+        .grid.two,
+        .shot-grid,
+        .components,
+        .checkout-row,
+        .meta-row,
+        .grid.three,
+        .matrix,
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-mockup,
+        .final-stack {
+          transform: scale(0.9);
+          transform-origin: top center;
+        }
+      }
+    </style>
+  </head>
   <body>
     <header class="site-header" aria-label="Gataama case study navigation">
       <a class="brand" href="../index.html" aria-label="Back to Udoh Blessing portfolio">
